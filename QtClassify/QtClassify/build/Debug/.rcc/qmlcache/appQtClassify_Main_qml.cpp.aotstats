@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 2000,
+                            "durationMicroseconds": 0,
                             "functionName": "left",
                             "line": 41,
                             "message": ""
@@ -792,7 +792,7 @@
                         {
                             "codegenResult": 2,
                             "column": 39,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "text",
                             "line": 367,
                             "message": "Cannot access value for name backend"

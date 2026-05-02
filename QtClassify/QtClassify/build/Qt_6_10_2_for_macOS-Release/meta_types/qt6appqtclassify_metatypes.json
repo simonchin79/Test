@@ -1,2 +1,352 @@
 [
+    {
+        "classes": [
+            {
+                "className": "ClassificationResultModel",
+                "lineNumber": 14,
+                "object": true,
+                "qualifiedClassName": "ClassificationResultModel",
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QAbstractListModel"
+                    }
+                ]
+            },
+            {
+                "className": "ClassifierBackend",
+                "lineNumber": 57,
+                "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 62,
+                        "name": "imagePath",
+                        "notify": "imagePathChanged",
+                        "read": "imagePath",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false,
+                        "write": "setImagePath"
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "lineNumber": 64,
+                        "name": "classificationLabel",
+                        "notify": "classificationChanged",
+                        "read": "classificationLabel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 2,
+                        "lineNumber": 66,
+                        "name": "brightness",
+                        "notify": "classificationChanged",
+                        "read": "brightness",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 3,
+                        "lineNumber": 68,
+                        "name": "entropy",
+                        "notify": "classificationChanged",
+                        "read": "entropy",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 4,
+                        "lineNumber": 70,
+                        "name": "cannyEdgeDensity",
+                        "notify": "classificationChanged",
+                        "read": "cannyEdgeDensity",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 5,
+                        "lineNumber": 72,
+                        "name": "usedTiebreaker",
+                        "notify": "classificationChanged",
+                        "read": "usedTiebreaker",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 6,
+                        "lineNumber": 74,
+                        "name": "lastError",
+                        "notify": "lastErrorChanged",
+                        "read": "lastError",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QString",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 7,
+                        "lineNumber": 78,
+                        "name": "roiFraction",
+                        "notify": "roiFractionChanged",
+                        "read": "roiFraction",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "double",
+                        "user": false,
+                        "write": "setRoiFraction"
+                    },
+                    {
+                        "constant": true,
+                        "designable": true,
+                        "final": false,
+                        "index": 8,
+                        "lineNumber": 82,
+                        "name": "batchModel",
+                        "read": "batchModel",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "QObject*",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 9,
+                        "lineNumber": 85,
+                        "name": "batchCountP50",
+                        "notify": "batchModelChanged",
+                        "read": "batchCountP50",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 10,
+                        "lineNumber": 86,
+                        "name": "batchCountP80",
+                        "notify": "batchModelChanged",
+                        "read": "batchCountP80",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 11,
+                        "lineNumber": 87,
+                        "name": "batchCountP150",
+                        "notify": "batchModelChanged",
+                        "read": "batchCountP150",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 12,
+                        "lineNumber": 88,
+                        "name": "batchCountErrors",
+                        "notify": "batchModelChanged",
+                        "read": "batchCountErrors",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 13,
+                        "lineNumber": 89,
+                        "name": "batchTotal",
+                        "notify": "batchModelChanged",
+                        "read": "batchTotal",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    }
+                ],
+                "qualifiedClassName": "ClassifierBackend",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 123,
+                        "name": "imagePathChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 1,
+                        "lineNumber": 124,
+                        "name": "classificationChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 2,
+                        "lineNumber": 125,
+                        "name": "lastErrorChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "lineNumber": 126,
+                        "name": "roiFractionChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 4,
+                        "lineNumber": 127,
+                        "name": "batchModelChanged",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "totalFiles",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 5,
+                        "lineNumber": 129,
+                        "name": "batchClassifyStarted",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "current",
+                                "type": "int"
+                            },
+                            {
+                                "name": "total",
+                                "type": "int"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 6,
+                        "lineNumber": 130,
+                        "name": "batchClassifyProgress",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 7,
+                        "lineNumber": 132,
+                        "name": "batchClassifyFinished",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 8,
+                        "lineNumber": 118,
+                        "name": "classifyCurrentImage",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "dirPath",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 9,
+                        "lineNumber": 119,
+                        "name": "classifyDirectory",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 10,
+                        "lineNumber": 120,
+                        "name": "clearBatchResults",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            }
+        ],
+        "inputFile": "classifierbackend.h",
+        "outputRevision": 69
+    }
 ]

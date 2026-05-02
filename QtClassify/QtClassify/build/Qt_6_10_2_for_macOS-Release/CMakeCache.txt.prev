@@ -288,6 +288,9 @@ OPENGL_gl_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/
 //OpenGL GLU library
 OPENGL_glu_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/System/Library/Frameworks/OpenGL.framework
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/opt/homebrew/lib/cmake/opencv4
+
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
@@ -363,6 +366,12 @@ Qt6QmlWorkerScript_DIR:PATH=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmak
 
 //The directory containing a CMake configuration file for Qt6Qml.
 Qt6Qml_DIR:PATH=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmake/Qt6Qml
+
+//The directory containing a CMake configuration file for Qt6QuickControls2.
+Qt6QuickControls2_DIR:PATH=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmake/Qt6QuickControls2
+
+//The directory containing a CMake configuration file for Qt6QuickTemplates2.
+Qt6QuickTemplates2_DIR:PATH=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmake/Qt6QuickTemplates2
 
 //The directory containing a CMake configuration file for Qt6QuickTools.
 Qt6QuickTools_DIR:PATH=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmake/Qt6QuickTools
@@ -542,6 +551,8 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/homebrew/Cellar/opencv/4.13.0_9][cfound components: core imgproc imgcodecs ][v4.13.0()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/System/Library/Frameworks/OpenGL.framework][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/System/Library/Frameworks/OpenGL.framework][c ][v()]
 //Test HAVE_STDATOMIC
@@ -1084,6 +1095,32 @@ QT_FEATURE_quick_tableview:INTERNAL=ON
 QT_FEATURE_quick_treeview:INTERNAL=ON
 //Qt feature: quick_viewtransitions (from target Qt6::Quick)
 QT_FEATURE_quick_viewtransitions:INTERNAL=ON
+//Qt feature: quickcontrols2_basic (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_basic:INTERNAL=ON
+//Qt feature: quickcontrols2_fluentwinui3 (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_fluentwinui3:INTERNAL=ON
+//Qt feature: quickcontrols2_fusion (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_fusion:INTERNAL=ON
+//Qt feature: quickcontrols2_imagine (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_imagine:INTERNAL=ON
+//Qt feature: quickcontrols2_ios (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_ios:INTERNAL=ON
+//Qt feature: quickcontrols2_macos (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_macos:INTERNAL=ON
+//Qt feature: quickcontrols2_material (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_material:INTERNAL=ON
+//Qt feature: quickcontrols2_universal (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_universal:INTERNAL=ON
+//Qt feature: quickcontrols2_windows (from target Qt6::QuickControls2)
+QT_FEATURE_quickcontrols2_windows:INTERNAL=OFF
+//Qt feature: quicktemplates2_calendar (from target Qt6::QuickTemplates2)
+QT_FEATURE_quicktemplates2_calendar:INTERNAL=ON
+//Qt feature: quicktemplates2_container (from target Qt6::QuickTemplates2)
+QT_FEATURE_quicktemplates2_container:INTERNAL=ON
+//Qt feature: quicktemplates2_hover (from target Qt6::QuickTemplates2)
+QT_FEATURE_quicktemplates2_hover:INTERNAL=ON
+//Qt feature: quicktemplates2_multitouch (from target Qt6::QuickTemplates2)
+QT_FEATURE_quicktemplates2_multitouch:INTERNAL=ON
 //Qt feature: raster_64bit (from target Qt6::Gui)
 QT_FEATURE_raster_64bit:INTERNAL=ON
 //Qt feature: raster_fp (from target Qt6::Gui)
@@ -1361,6 +1398,6 @@ QT_FEATURE_xrender:INTERNAL=OFF
 //Qt feature: zstd (from target Qt6::Core)
 QT_FEATURE_zstd:INTERNAL=OFF
 //CMAKE_INSTALL_PREFIX during last run
-_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
+_GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/tmp
 __qt_qml_macros_module_base_dir:INTERNAL=/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/cmake/Qt6Qml
 

@@ -526,6 +526,54 @@ build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cp
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.s
 .PHONY : build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.s
 
+classifier.o: classifier.cpp.o
+.PHONY : classifier.o
+
+# target to build an object file
+classifier.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifier.cpp.o
+.PHONY : classifier.cpp.o
+
+classifier.i: classifier.cpp.i
+.PHONY : classifier.i
+
+# target to preprocess a source file
+classifier.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifier.cpp.i
+.PHONY : classifier.cpp.i
+
+classifier.s: classifier.cpp.s
+.PHONY : classifier.s
+
+# target to generate assembly for a file
+classifier.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifier.cpp.s
+.PHONY : classifier.cpp.s
+
+classifierbackend.o: classifierbackend.cpp.o
+.PHONY : classifierbackend.o
+
+# target to build an object file
+classifierbackend.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o
+.PHONY : classifierbackend.cpp.o
+
+classifierbackend.i: classifierbackend.cpp.i
+.PHONY : classifierbackend.i
+
+# target to preprocess a source file
+classifierbackend.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifierbackend.cpp.i
+.PHONY : classifierbackend.cpp.i
+
+classifierbackend.s: classifierbackend.cpp.s
+.PHONY : classifierbackend.s
+
+# target to generate assembly for a file
+classifierbackend.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/classifierbackend.cpp.s
+.PHONY : classifierbackend.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -597,6 +645,12 @@ help:
 	@echo "... build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.o"
 	@echo "... build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.i"
 	@echo "... build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.s"
+	@echo "... classifier.o"
+	@echo "... classifier.i"
+	@echo "... classifier.s"
+	@echo "... classifierbackend.o"
+	@echo "... classifierbackend.i"
+	@echo "... classifierbackend.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -1,0 +1,12 @@
+{
+    "files": [
+        {
+            "new_size": 31092,
+            "original_size": 32232,
+            "path": "QtClassify/QtClassify/Main.qml"
+        }
+    ],
+    "operation_type": "apply_patch",
+    "project_root": "/Users/simonchin79gmail.com/Data/Projects/Test",
+    "timestamp": "20260502T141537266"
+}

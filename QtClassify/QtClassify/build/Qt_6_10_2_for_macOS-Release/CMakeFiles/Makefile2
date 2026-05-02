@@ -94,20 +94,20 @@ clean: CMakeFiles/appQtClassify_autogen.dir/clean
 # Target rules for target CMakeFiles/appQtClassify.dir
 
 # All Build rule for target.
-CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_autogen.dir/all
 CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_copy_qml.dir/all
 CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_copy_res.dir/all
 CMakeFiles/appQtClassify.dir/all: CMakeFiles/generate_qmlls_build_ini_file.dir/all
 CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_qmlimportscan.dir/all
+CMakeFiles/appQtClassify.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify.dir/build.make CMakeFiles/appQtClassify.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 "Built target appQtClassify"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 "Built target appQtClassify"
 .PHONY : CMakeFiles/appQtClassify.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appQtClassify.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appQtClassify.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles 0
 .PHONY : CMakeFiles/appQtClassify.dir/rule
@@ -128,7 +128,7 @@ CMakeFiles/appQtClassify.dir/clean:
 CMakeFiles/appQtClassify_qmltyperegistration.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_qmltyperegistration.dir/build.make CMakeFiles/appQtClassify_qmltyperegistration.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_qmltyperegistration.dir/build.make CMakeFiles/appQtClassify_qmltyperegistration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=23,24,25,26,27 "Built target appQtClassify_qmltyperegistration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=25,26,27,28,29 "Built target appQtClassify_qmltyperegistration"
 .PHONY : CMakeFiles/appQtClassify_qmltyperegistration.dir/all
 
 # Build rule for subdir invocation for target.
@@ -336,7 +336,7 @@ CMakeFiles/all_qmllint_module.dir/clean:
 CMakeFiles/appQtClassify_copy_qml.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_copy_qml.dir/build.make CMakeFiles/appQtClassify_copy_qml.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_copy_qml.dir/build.make CMakeFiles/appQtClassify_copy_qml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=20 "Built target appQtClassify_copy_qml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=22 "Built target appQtClassify_copy_qml"
 .PHONY : CMakeFiles/appQtClassify_copy_qml.dir/all
 
 # Build rule for subdir invocation for target.
@@ -362,7 +362,7 @@ CMakeFiles/appQtClassify_copy_qml.dir/clean:
 CMakeFiles/appQtClassify_copy_res.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_copy_res.dir/build.make CMakeFiles/appQtClassify_copy_res.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_copy_res.dir/build.make CMakeFiles/appQtClassify_copy_res.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=21 "Built target appQtClassify_copy_res"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=23 "Built target appQtClassify_copy_res"
 .PHONY : CMakeFiles/appQtClassify_copy_res.dir/all
 
 # Build rule for subdir invocation for target.
@@ -388,7 +388,7 @@ CMakeFiles/appQtClassify_copy_res.dir/clean:
 CMakeFiles/generate_qmlls_build_ini_file.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_qmlls_build_ini_file.dir/build.make CMakeFiles/generate_qmlls_build_ini_file.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_qmlls_build_ini_file.dir/build.make CMakeFiles/generate_qmlls_build_ini_file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=28 "Built target generate_qmlls_build_ini_file"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=30 "Built target generate_qmlls_build_ini_file"
 .PHONY : CMakeFiles/generate_qmlls_build_ini_file.dir/all
 
 # Build rule for subdir invocation for target.
@@ -411,11 +411,11 @@ CMakeFiles/generate_qmlls_build_ini_file.dir/clean:
 # Target rules for target CMakeFiles/module_appQtClassify_aotstats_target.dir
 
 # All Build rule for target.
-CMakeFiles/module_appQtClassify_aotstats_target.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 CMakeFiles/module_appQtClassify_aotstats_target.dir/all: CMakeFiles/appQtClassify_qmltyperegistration.dir/all
+CMakeFiles/module_appQtClassify_aotstats_target.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/module_appQtClassify_aotstats_target.dir/build.make CMakeFiles/module_appQtClassify_aotstats_target.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/module_appQtClassify_aotstats_target.dir/build.make CMakeFiles/module_appQtClassify_aotstats_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=29,30 "Built target module_appQtClassify_aotstats_target"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=31,32 "Built target module_appQtClassify_aotstats_target"
 .PHONY : CMakeFiles/module_appQtClassify_aotstats_target.dir/all
 
 # Build rule for subdir invocation for target.
@@ -438,8 +438,8 @@ CMakeFiles/module_appQtClassify_aotstats_target.dir/clean:
 # Target rules for target CMakeFiles/all_aotstats.dir
 
 # All Build rule for target.
-CMakeFiles/all_aotstats.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 CMakeFiles/all_aotstats.dir/all: CMakeFiles/module_appQtClassify_aotstats_target.dir/all
+CMakeFiles/all_aotstats.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_aotstats.dir/build.make CMakeFiles/all_aotstats.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/all_aotstats.dir/build.make CMakeFiles/all_aotstats.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=1 "Built target all_aotstats"
@@ -468,7 +468,7 @@ CMakeFiles/all_aotstats.dir/clean:
 CMakeFiles/appQtClassify_qmlimportscan.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_qmlimportscan.dir/build.make CMakeFiles/appQtClassify_qmlimportscan.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_qmlimportscan.dir/build.make CMakeFiles/appQtClassify_qmlimportscan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=22 "Built target appQtClassify_qmlimportscan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=24 "Built target appQtClassify_qmlimportscan"
 .PHONY : CMakeFiles/appQtClassify_qmlimportscan.dir/all
 
 # Build rule for subdir invocation for target.
@@ -523,7 +523,7 @@ CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/clean:
 CMakeFiles/appQtClassify_autogen.dir/all: CMakeFiles/appQtClassify_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_autogen.dir/build.make CMakeFiles/appQtClassify_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appQtClassify_autogen.dir/build.make CMakeFiles/appQtClassify_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=19 "Built target appQtClassify_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=21 "Built target appQtClassify_autogen"
 .PHONY : CMakeFiles/appQtClassify_autogen.dir/all
 
 # Build rule for subdir invocation for target.

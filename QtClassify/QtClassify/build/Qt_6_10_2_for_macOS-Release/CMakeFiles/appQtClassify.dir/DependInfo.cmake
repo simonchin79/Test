@@ -15,6 +15,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o.d"
   "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o.d"
   "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o.d"
+  "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifier.cpp" "CMakeFiles/appQtClassify.dir/classifier.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/classifier.cpp.o.d"
+  "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.cpp" "CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o.d"
   "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/main.cpp" "CMakeFiles/appQtClassify.dir/main.cpp.o" "gcc" "CMakeFiles/appQtClassify.dir/main.cpp.o.d"
   )
 

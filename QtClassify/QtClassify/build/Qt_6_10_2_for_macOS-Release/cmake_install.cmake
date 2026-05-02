@@ -43,6 +43,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./appQtClassify.app/Contents/MacOS/appQtClassify")
     execute_process(COMMAND /usr/bin/install_name_tool
       -delete_rpath "/Users/simonchin79gmail.com/Qt/6.10.2/macos/lib"
+      -delete_rpath "/opt/homebrew/lib"
       -add_rpath "@executable_path/../Frameworks"
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/./appQtClassify.app/Contents/MacOS/appQtClassify")
   endif()

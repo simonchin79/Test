@@ -51,7 +51,7 @@ Window {
             spacing: 12
 
             Text {
-                text: "🔬 QtClassify"
+                text: "QtClassify"
                 color: textPrimary
                 font.pixelSize: 20
                 font.bold: true
@@ -112,7 +112,7 @@ Window {
 
             TabButton {
                 id: singleTab
-                text: "🖼  Single Image"
+                text: "Single Image"
                 width: 160
                 height: 40
                 checked: true
@@ -134,7 +134,7 @@ Window {
 
             TabButton {
                 id: batchTab
-                text: "📁  Batch Directory"
+                text: "Batch Directory"
                 width: 180
                 height: 40
                 onClicked: swipeView.currentIndex = 1
@@ -180,7 +180,7 @@ Window {
                     spacing: 10
 
                     Button {
-                        text: "📂  Select Image…"
+                        text: "Select Image..."
                         onClicked: fileDialog.open()
 
                         background: Rectangle {
@@ -217,7 +217,7 @@ Window {
                     }
 
                     Button {
-                        text: "🔄  Re-classify"
+                        text: "Re-classify"
                         enabled: backend.imagePath !== ""
                         onClicked: backend.classifyCurrentImage()
 
@@ -272,7 +272,7 @@ Window {
 
                         Text {
                             anchors.centerIn: parent
-                            text: "🖼\nSelect an image to preview"
+                            text: "Select an image to preview"
                             color: textSecondary
                             font.pixelSize: 14
                             horizontalAlignment: Text.AlignHCenter
@@ -332,7 +332,7 @@ Window {
                                 Text {
                                     id: tieText
                                     anchors.centerIn: parent
-                                    text: "⚡ Canny tiebreaker used"
+                                    text: "Canny tiebreaker used"
                                     color: p150Color
                                     font.pixelSize: 11
                                 }
@@ -411,7 +411,7 @@ Window {
                     spacing: 10
 
                     Button {
-                        text: "📁  Select Directory…"
+                        text: "Select Directory..."
                         onClicked: batchDirDialog.open()
 
                         background: Rectangle {
@@ -453,10 +453,10 @@ Window {
                     }
 
                     Button {
-                        text: batchProgress.running ? "⏳ Classifying…" : "▶  Classify All"
+                        text: batchProgress.running ? "Classifying..." : "Classify All"
                         enabled: batchDirText.text !== "" && !batchProgress.running
                         onClicked: {
-                            backend.clearBatchResults();
+                            backend.clearBatchResults()
                             backend.classifyDirectory(batchDirText.text);
                         }
 
@@ -476,7 +476,7 @@ Window {
                     }
 
                     Button {
-                        text: "✕  Clear"
+                        text: "Clear"
                         enabled: backend.batchTotal > 0 && !batchProgress.running
                         onClicked: backend.clearBatchResults()
 
@@ -634,7 +634,7 @@ Window {
                                     verticalAlignment: Text.AlignVCenter
                                 }
                                 Text {
-                                    text: usedTiebreaker ? "⚡tie" : ""
+                                    text: usedTiebreaker ? "tie" : ""
                                     color: p150Color
                                     font.pixelSize: 10
                                     width: parent.width * 0.10

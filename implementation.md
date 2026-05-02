@@ -60,7 +60,7 @@ QtClassify/QtClassify/
 - Batch Directory page:
   - Directory picker + classify all button + clear button.
   - Progress bar with file count.
-  - Scrollable ListView with columns: File, Result, Brightness, Entropy, Canny%, Note (⚡tie).
+  - Scrollable ListView with columns: File, Result, Brightness, Entropy, Canny%, Note (tie).
   - Summary bar at bottom: Total, P50, P80, P150, Errors counts.
 
 ### Build
@@ -78,6 +78,25 @@ cmake --build QtClassify/QtClassify/build/Debug
 - Qt 6.10.2 (Quick, QuickControls2) — from Homebrew (`/opt/homebrew/opt/qt@6`)
 - OpenCV 4.13.0 (core, imgproc, imgcodecs) — from Homebrew (`/opt/homebrew/opt/opencv`)
 - macOS 15+ arm64, Apple Clang 21
+
+### macOS-Specific: libpng Symbol Conflict & Emoji Crash
+- On macOS (Apple Silicon, macOS 26.x), the app uses the **`basic`** render loop
+  (`QSG_RENDER_LOOP=basic` set in `main.cpp`).
+- **Root cause**: Homebrew's `libpng16.16.dylib` (loaded transitively by OpenCV's
+  `libopencv_imgcodecs`) conflicts with Apple's internal libpng inside ImageIO.
+  When CoreText renders an emoji glyph, it calls `CopyEmojiImage` → ImageIO →
+  `PNGReadPlugin::InitializePluginData`, which resolves libpng function pointers
+  to Homebrew's libpng instead of the system's, corrupting state and causing a
+  jump to a freed-memory sentinel (`0xbad4007`) → `EXC_BAD_ACCESS` (SIGBUS).
+- **Fix 1 (eliminate trigger)**: All emoji characters have been removed from
+  `Main.qml` and replaced with plain ASCII text. This avoids `CopyEmojiImage`
+  entirely.
+- **Fix 2 (linker hardening)**: `CMakeLists.txt` sets `-Wl,-twolevel_namespace`
+  and `-Wl,-bind_at_load` on macOS to enforce strict symbol resolution and
+  fail-fast at launch rather than lazy-binding.
+- **Fix 3 (render loop)**: `QSG_RENDER_LOOP=basic` keeps all rendering on the
+  main thread, avoiding thread-safety issues in CoreText/ImageIO.
+- Crash analyzed 2026-05-02 on macOS 26.4.1 / Mac17,4 (Apple Silicon).
 
 ## Focus Mode (P80 vs P150)
 `classify.py` now supports a `--p80p150` flag that classifies both P80 and P150 directories in one pass, showing per-image brightness/entropy/canny, a confusion matrix, and listing all misclassified images. Usage: `python classify.py --p80p150 Dataset/P80 Dataset/P150`
@@ -141,3 +160,4 @@ cmake --build QtClassify/QtClassify/build/Debug
 - Canny threshold 16.0% chosen with a clean 1.3% gap from the nearest misclassified case on each side.
 - Two-stage (three-step) classifier achieves 100% accuracy across all 629 images.
 - QtClassify C++ app mirrors all thresholds exactly for identical results.
+- All emoji characters removed from Main.qml to avoid macOS libpng symbol conflict crash.

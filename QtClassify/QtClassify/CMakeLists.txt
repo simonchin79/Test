@@ -45,6 +45,25 @@ target_link_libraries(appQtClassify
         ${OpenCV_LIBS}
 )
 
+# ---- macOS: explicit two-level namespace (defence-in-depth) ---------
+# Homebrew OpenCV links against Homebrew libpng16.16.dylib.  Apple's
+# ImageIO framework (used by CoreText when rendering emoji glyphs) contains
+# its own internal libpng.  If Homebrew libpng symbols are visible in the
+# flat namespace, ImageIO's PNG reader can resolve to the wrong symbols,
+# corrupting function pointers and crashing with EXC_BAD_ACCESS (SIGBUS).
+#
+# -twolevel_namespace (the macOS default) ensures each library resolves
+# symbols only against its explicit dependencies.  Setting it explicitly
+# prevents accidental flat-namespace behaviour.
+#
+# Primary fix: all emoji characters removed from Main.qml to avoid
+# triggering CoreText's CopyEmojiImage → ImageIO → PNG path entirely.
+if(APPLE)
+    target_link_options(appQtClassify PRIVATE
+        -Wl,-twolevel_namespace
+    )
+endif()
+
 install(TARGETS appQtClassify
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

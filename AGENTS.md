@@ -1,7 +1,7 @@
-QtClassify/
-└── QtClassify/                    # Actual Qt CMake project root
-    ├── CMakeLists.txt             # Qt6 CMake build file
-    ├── main.cpp                   # C++ entry point
-    ├── Main.qml                   # Minimal QML UI (640×480 "Hello World" window)
-    ├── .qtcreator/                # Qt Creator IDE config
-    └── build/                     # Existing builds (Debug + Release, Qt 6.10.2 for macOS)
+export PATH="/opt/homebrew/bin:$HOME/Qt/Tools/Ninja:$PATH"
+cmake -S QtClassify/QtClassify -B QtClassify/QtClassify/build/Debug \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt@6 \
+    -DOpenCV_DIR=/opt/homebrew/opt/opencv \
+    -G Ninja
+cmake --build QtClassify/QtClassify/build/Debug

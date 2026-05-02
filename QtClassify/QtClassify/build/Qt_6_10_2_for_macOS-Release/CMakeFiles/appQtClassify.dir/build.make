@@ -84,6 +84,7 @@ appqtclassify_qmltyperegistrations.cpp: /Users/simonchin79gmail.com/Qt/6.10.2/ma
 appqtclassify_qmltyperegistrations.cpp: /Users/simonchin79gmail.com/Qt/6.10.2/macos/metatypes/qt6quick_metatypes.json
 appqtclassify_qmltyperegistrations.cpp: /Users/simonchin79gmail.com/Qt/6.10.2/macos/metatypes/qt6gui_metatypes.json
 appqtclassify_qmltyperegistrations.cpp: /Users/simonchin79gmail.com/Qt/6.10.2/macos/metatypes/qt6opengl_metatypes.json
+appqtclassify_qmltyperegistrations.cpp: /Users/simonchin79gmail.com/Qt/6.10.2/macos/metatypes/qt6quickcontrols2_metatypes.json
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic QML type registration for target appQtClassify"
 	/Users/simonchin79gmail.com/Qt/6.10.2/macos/libexec/qmltyperegistrar --generate-qmltypes=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/QtClassify/appQtClassify.qmltypes --import-name=QtClassify --major-version=254 --minor-version=254 @/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/qmltypes/appQtClassify_foreign_types.txt -o /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/appqtclassify_qmltyperegistrations.cpp /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/meta_types/qt6appqtclassify_metatypes.json
 	/Users/simonchin79gmail.com/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E make_directory /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/qmltypes
@@ -167,10 +168,38 @@ CMakeFiles/appQtClassify.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appQtClassify.dir/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/main.cpp -o CMakeFiles/appQtClassify.dir/main.cpp.s
 
+CMakeFiles/appQtClassify.dir/classifier.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
+CMakeFiles/appQtClassify.dir/classifier.cpp.o: /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifier.cpp
+CMakeFiles/appQtClassify.dir/classifier.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appQtClassify.dir/classifier.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/classifier.cpp.o -MF CMakeFiles/appQtClassify.dir/classifier.cpp.o.d -o CMakeFiles/appQtClassify.dir/classifier.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifier.cpp
+
+CMakeFiles/appQtClassify.dir/classifier.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appQtClassify.dir/classifier.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifier.cpp > CMakeFiles/appQtClassify.dir/classifier.cpp.i
+
+CMakeFiles/appQtClassify.dir/classifier.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appQtClassify.dir/classifier.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifier.cpp -o CMakeFiles/appQtClassify.dir/classifier.cpp.s
+
+CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
+CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o: /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.cpp
+CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o -MF CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o.d -o CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.cpp
+
+CMakeFiles/appQtClassify.dir/classifierbackend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appQtClassify.dir/classifierbackend.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.cpp > CMakeFiles/appQtClassify.dir/classifierbackend.cpp.i
+
+CMakeFiles/appQtClassify.dir/classifierbackend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appQtClassify.dir/classifierbackend.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.cpp -o CMakeFiles/appQtClassify.dir/classifierbackend.cpp.s
+
 CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
 CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o: appqtclassify_qmltyperegistrations.cpp
 CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o -MF CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o.d -o CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/appqtclassify_qmltyperegistrations.cpp
 
 CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.i: cmake_force
@@ -184,7 +213,7 @@ CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.s: cmake_for
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o: .qt/rcc/qrc_qmake_QtClassify.cpp
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o -MF CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o.d -o CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp
 
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.i: cmake_force
@@ -198,7 +227,7 @@ CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o: .rcc/qmlcache/appQtClassify_qmlcache_loader.cpp
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o -MF CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o.d -o CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp
 
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.i: cmake_force
@@ -212,7 +241,7 @@ CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/app
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o: .rcc/qmlcache/appQtClassify_Main_qml.cpp
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o -MF CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o.d -o CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp
 
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.i: cmake_force
@@ -226,7 +255,7 @@ CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/app
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o: CMakeFiles/appQtClassify.dir/flags.make
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o: .qt/rcc/qrc_appQtClassify_raw_qml_0.cpp
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o: CMakeFiles/appQtClassify.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o -MF CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o.d -o CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o -c /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp
 
 CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.i: cmake_force
@@ -241,6 +270,8 @@ CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQt
 appQtClassify_OBJECTS = \
 "CMakeFiles/appQtClassify.dir/appQtClassify_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/appQtClassify.dir/main.cpp.o" \
+"CMakeFiles/appQtClassify.dir/classifier.cpp.o" \
+"CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o" \
 "CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o" \
 "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o" \
 "CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o" \
@@ -252,20 +283,26 @@ appQtClassify_EXTERNAL_OBJECTS =
 
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/appQtClassify_autogen/mocs_compilation.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/main.cpp.o
+appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/classifier.cpp.o
+appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/classifierbackend.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/appqtclassify_qmltyperegistrations.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_qmake_QtClassify.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_qmlcache_loader.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/build.make
+appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQuickControls2.framework/Versions/A/QtQuickControls2
+appQtClassify.app/Contents/MacOS/appQtClassify: /opt/homebrew/lib/libopencv_imgcodecs.4.13.0.dylib
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQuick.framework/Versions/A/QtQuick
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtGui.framework/Versions/A/QtGui
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQml.framework/Versions/A/QtQml
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtNetwork.framework/Versions/A/QtNetwork
 appQtClassify.app/Contents/MacOS/appQtClassify: /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Versions/A/QtCore
+appQtClassify.app/Contents/MacOS/appQtClassify: /opt/homebrew/lib/libopencv_imgproc.4.13.0.dylib
+appQtClassify.app/Contents/MacOS/appQtClassify: /opt/homebrew/lib/libopencv_core.4.13.0.dylib
 appQtClassify.app/Contents/MacOS/appQtClassify: CMakeFiles/appQtClassify.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable appQtClassify.app/Contents/MacOS/appQtClassify"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable appQtClassify.app/Contents/MacOS/appQtClassify"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/appQtClassify.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
