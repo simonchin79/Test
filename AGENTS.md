@@ -1,5 +1,2 @@
-                       Predicted
-Actual          P80   P150  Err  Total
-----------------------------------------
-P80             216      0    0    216
-P150              0    173    0    173
+cd /Users/simonchin79gmail.com/Data/Projects/Test
+python3 classify.py --p80p150 Dataset/P80 Dataset/P150

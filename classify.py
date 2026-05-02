@@ -16,7 +16,7 @@ Focus Mode (P80 vs P150 only):
     Reports confusion matrix and accuracy for each group.
 
 Classification Strategy:
-    Stage 1:  P50 vs (P80/P150)  — mean grayscale brightness (threshold 86)
+    Stage 1:  P50 vs (P80/P150)  — mean grayscale br`ightness (threshold 86)
     Stage 2a: P80 vs P150        — histogram entropy (threshold 3.815, 32 bins)
     Stage 2b: Entropy ambiguity zone [3.77, 3.845] — Canny edge density tiebreaker
               - canny ≤ 16.0  → P80  (unusually smooth P80)

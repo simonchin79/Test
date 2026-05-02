@@ -1,0 +1,14 @@
+-rootPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify
+-cmake-output
+-output-file
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/qml_imports/appQtClassify_build.cmake
+-importPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release
+-importPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/QtClassify
+-importPath
+/Users/simonchin79gmail.com/Qt/6.10.2/macos/qml
+-qrcFiles
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/qmake_QtClassify.qrc
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Release/.qt/rcc/appQtClassify_raw_qml_0.qrc

@@ -1,0 +1,15 @@
+{
+    "formatRevision": 1,
+    "modules": [
+        {
+            "moduleFiles": [
+                {
+                    "entries": [
+                    ],
+                    "filePath": "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml"
+                }
+            ],
+            "moduleId": "QtClassify(appQtClassify)"
+        }
+    ]
+}

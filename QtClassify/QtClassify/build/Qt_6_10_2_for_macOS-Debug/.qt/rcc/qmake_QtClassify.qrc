@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/QtClassify">
+    <file alias="qmldir">/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Debug/QtClassify/qmldir</file>
+  </qresource>
+</RCC>
+

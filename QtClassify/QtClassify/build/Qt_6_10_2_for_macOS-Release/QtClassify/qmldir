@@ -1,0 +1,6 @@
+module QtClassify
+typeinfo appQtClassify.qmltypes
+prefer :/qt/qml/QtClassify/
+Main 254.0 Main.qml
+depends QtQuick
+

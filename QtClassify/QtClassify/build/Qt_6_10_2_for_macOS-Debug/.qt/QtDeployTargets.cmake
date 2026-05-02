@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_appQtClassify_FILE /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Qt_6_10_2_for_macOS-Debug/appQtClassify.app/Contents/MacOS/appQtClassify)
+set(__QT_DEPLOY_TARGET_appQtClassify_TYPE EXECUTABLE)
