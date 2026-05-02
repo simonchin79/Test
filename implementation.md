@@ -7,7 +7,7 @@ implementation notes. Keep it up to date as the project evolves.
 Image classification project using OpenCV (cv2) to classify images into three groups: P50, P80, and P150.
 
 ## Focus Mode (P80 vs P150)
-`classify.py` now supports a `--p80p150` flag that classifies both P80 and P150 directories in one pass, showing per-image brightness/entropy, a confusion matrix, and listing all misclassified images. Usage: `python classify.py --p80p150 Dataset/P80 Dataset/P150`
+`classify.py` now supports a `--p80p150` flag that classifies both P80 and P150 directories in one pass, showing per-image brightness/entropy/canny, a confusion matrix, and listing all misclassified images. Usage: `python classify.py --p80p150 Dataset/P80 Dataset/P150`
 
 ## Architecture
 
@@ -16,7 +16,7 @@ Image classification project using OpenCV (cv2) to classify images into three gr
 - `Dataset/P80/` — 216 images, darker with texture (mean brightness ~54, entropy ~4.00)
 - `Dataset/P150/` — 173 images, dark and smooth (mean brightness ~49, entropy ~3.71)
 
-### Classification Strategy (two-stage with ROI)
+### Classification Strategy (two-stage with Canny tiebreaker)
 
 **Preprocessing — ROI Crop**
 - Before any analysis, the image is cropped to the central region (default 80% of width and height).
@@ -29,24 +29,34 @@ Image classification project using OpenCV (cv2) to classify images into three gr
 - Result: 100% accurate — no overlap between P50 and other groups
 
 **Stage 2: P80 vs P150**
-- Feature: Entropy (texture complexity via 32-bin histogram, computed on ROI-cropped image)
-- Threshold: 3.815
-- Accuracy: 98.5% (383/389 correct — 3/216 P80 misclassified, 3/173 P150 misclassified)
-- The 6 hard-overlap cases have similar entropy in the 3.77–3.84 range
+- Stage 2a (primary): 32-bin histogram entropy
+  - entropy > 3.845 → P80
+  - entropy < 3.77  → P150
+  - entropy in [3.77, 3.845] → ambiguity zone, goes to Stage 2b
+- Stage 2b (tiebreaker): Canny edge density (Canny 50/150)
+  - canny ≤ 16.0% → P80 (unusually smooth P80)
+  - canny > 16.0%  → P150 (unusually textured P150)
+- The 6 original hard-overlap cases have a clean gap in canny edge density:
+  - P80→P150 misclassified: canny 14.4–15.4%
+  - P150→P80 misclassified: canny 16.7–17.5%
+- 28 images total fall in the [3.77, 3.845] ambiguity zone; canny tiebreaker correctly classifies all 28.
 
 ### Performance Summary (ROI=0.80)
 | Class  | Correct/Total | Accuracy |
 |--------|---------------|----------|
 | P50    | 240/240       | 100.0%   |
-| P80    | 213/216       | 98.6%    |
-| P150   | 170/173       | 98.3%    |
-| **Overall** | **623/629** | **99.0%** |
+| P80    | 216/216       | 100.0%   |
+| P150   | 173/173       | 100.0%   |
+| **Overall** | **629/629** | **100.0%** |
 
 ### Classifier Script
 - `classify.py` — Main script using cv2 to classify images
 
 ## Key Files & Modules
-- `classify.py` — Image classification script (optimized thresholds)
+- `classify.py` — Image classification script (entropy + Canny tiebreaker)
+- `classify_v2.py` — Experimental script testing multiple alternative strategies
+- `analyze_features.py` — Feature distribution analysis across all three classes
+- `diagnose_hard_cases.py` — Diagnostic tool for analyzing hard cases with extra features
 
 ## Key Decisions
 - ROI applied first, before any analysis, to exclude non-critical side regions.
@@ -54,5 +64,6 @@ Image classification project using OpenCV (cv2) to classify images into three gr
 - P50 brightness threshold 86 (safe gap between P50 min 89.2 and non-P50 max 85.8).
 - Using histogram entropy for P80 vs P150 distinction because it captures texture complexity best.
 - 32-bin histogram for entropy calculation (good balance of detail vs noise).
-- Entropy threshold 3.815 yields 98.5% accuracy on P80 vs P150.
-- Two-stage classifier for cleaner separation.
+- Canny edge density (thresholds 50/150) as tiebreaker in entropy ambiguity zone [3.77, 3.845].
+- Canny threshold 16.0% chosen with a clean 1.3% gap from the nearest misclassified case on each side.
+- Two-stage (three-step) classifier achieves 100% accuracy across all 629 images.
