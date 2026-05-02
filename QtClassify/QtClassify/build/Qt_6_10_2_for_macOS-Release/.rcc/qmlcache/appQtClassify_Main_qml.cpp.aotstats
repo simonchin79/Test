@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "left",
                             "line": 41,
                             "message": ""
@@ -1786,7 +1786,7 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "target",
-                            "line": 753,
+                            "line": 761,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1794,7 +1794,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyStarted",
-                            "line": 754,
+                            "line": 762,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1802,7 +1802,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyProgress",
-                            "line": 759,
+                            "line": 767,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1810,7 +1810,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyFinished",
-                            "line": 763,
+                            "line": 771,
                             "message": ""
                         }
                     ],

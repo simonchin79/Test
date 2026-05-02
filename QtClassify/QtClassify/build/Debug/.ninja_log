@@ -54,3 +54,16 @@
 65	79	1777731782421551775	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/meta_types/appQtClassify_json_file_list.txt	e1b28f33844aee57
 65	79	1777731782421551775	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/meta_types/appQtClassify_json_file_list.txt.timestamp	e1b28f33844aee57
 79	206	1777731782436155392	appQtClassify.app/Contents/MacOS/appQtClassify	8c4a9cb0b9fe9dce
+8	17	1777733392066196000	.qt/appQtClassify_qml.txt	87d792ed0be439a2
+8	17	1777733392066196000	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/appQtClassify_qml.txt	87d792ed0be439a2
+9	117	1777733392166091334	.qt/qml_imports/appQtClassify_build.cmake	147af2df3a6f2383
+9	117	1777733392166091334	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/qml_imports/appQtClassify_build.cmake	147af2df3a6f2383
+118	137	1777733392186062357	.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp	d3da9e3baf2d2842
+118	137	1777733392186062357	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp	d3da9e3baf2d2842
+117	185	1777733392232083980	.rcc/qmlcache/appQtClassify_Main_qml.cpp	d09b5003c10f0c52
+117	185	1777733392232083980	.rcc/qmlcache/appQtClassify_Main_qml.cpp.aotstats	d09b5003c10f0c52
+117	185	1777733392232083980	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.rcc/qmlcache/appQtClassify_Main_qml.cpp	d09b5003c10f0c52
+117	185	1777733392232083980	/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.rcc/qmlcache/appQtClassify_Main_qml.cpp.aotstats	d09b5003c10f0c52
+185	357	1777733392235193269	CMakeFiles/appQtClassify.dir/build/Debug/.qt/rcc/qrc_appQtClassify_raw_qml_0.cpp.o	bd31dc42473de1f6
+185	1137	1777733392235026561	CMakeFiles/appQtClassify.dir/build/Debug/.rcc/qmlcache/appQtClassify_Main_qml.cpp.o	89fa23a0d6d01f5d
+1137	1289	1777733393187055341	appQtClassify.app/Contents/MacOS/appQtClassify	8c4a9cb0b9fe9dce

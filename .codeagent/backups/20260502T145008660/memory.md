@@ -5,12 +5,6 @@ It is always loaded as context so the agent can recall past work,
 decisions, open issues, and next steps.
 
 ## Recent Changes
-- **2026-05-02 (batch dir picker fix)**: Fixed `Main.qml` `batchDirDialog` to
-  use `currentFolder` as fallback when `selectedFolder` is empty. On macOS,
-  `FileDialog.OpenFolder` can fail to populate `selectedFolder` when the user
-  navigates INTO a directory and clicks Open, causing the dialog to select a
-  file (image) inside the directory instead of the directory itself. The fix
-  ensures the correct directory path is always captured.
 - **2026-05-02 (later)**: Diagnosed the real root cause of the macOS crash. The
   crash persisted on the main thread even after setting `QSG_RENDER_LOOP=basic`
   because the actual issue is a **libpng symbol conflict** between Homebrew's
