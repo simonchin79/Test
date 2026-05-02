@@ -1,3 +1,15 @@
-   python3 classify.py Dataset/P150/ --roi 0.70   # tighter 70% crop
-   python3 classify.py Dataset/P50/ --roi 0.90    # gentler 90% crop
+   P80   accuracy  : 213/216 ( 98.6%)
+   P150  accuracy  : 170/173 ( 98.3%)
+   Overall accuracy  : 383/389 ( 98.5%)
+
+   Confusion Matrix:
+                           Predicted
+   Actual          P80   P150  Err  Total
+   --------------------------------------------
+   P80             213      3    0    216
+   P150              3    170    0    173
+
+   Misclassified images (6 total):
+     P150→P80: 20230530_103529_434_ID42, 20230530_103051_435_ID34, 20230530_100811_348_ID12
+     P80→P150: 20230530_162951_046_ID121, 20230531_092850_081_ID4, 20230524_002059_022_CH0_CLS3
    
