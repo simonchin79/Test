@@ -4,12 +4,85 @@ This file records the project architecture, design decisions, and
 implementation notes. Keep it up to date as the project evolves.
 
 ## Overview
-Image classification project using OpenCV (cv2) to classify images into three groups: P50, P80, and P150.
+Image classification project using OpenCV to classify images into three groups: P50, P80, and P150. Two implementations exist:
+
+1. **Python** (`classify.py`) — reference implementation, 100% accurate.
+2. **QtClassify** (`QtClassify/QtClassify/`) — C++/QML desktop application with GUI, identical classification logic.
+
+## QtClassify C++/QML Application
+
+### Architecture
+```
+QtClassify/QtClassify/
+├── CMakeLists.txt              # Qt6 + OpenCV build
+├── main.cpp                    # Entry point, registers ClassifierBackend
+├── classifier.h / .cpp         # Pure C++ classifier (OpenCV only)
+├── classifierbackend.h / .cpp  # QObject bridge → exposes to QML
+├── Main.qml                    # Full UI (Single + Batch tabs)
+├── .qtcreator/                 # Qt Creator IDE config
+└── build/Debug/                # Build output
+```
+
+### Component Roles
+
+**Classifier** (`classifier.h/.cpp`)
+- Stateless image classifier with configurable ROI fraction.
+- Public API: `ClassificationResult classifyImage(const std::string &path)`
+- `ClassificationResult` struct: label, brightness, entropy, cannyEdgeDensity, usedTiebreaker, filename.
+- Three-stage pipeline identical to `classify.py`:
+  1. Stage 1: mean brightness > 86 → P50
+  2. Stage 2a: entropy > 3.845 → P80, < 3.77 → P150
+  3. Stage 2b: Canny edge density > 16.0% → P150, else P80 (tiebreaker)
+
+**ClassifierBackend** (`classifierbackend.h/.cpp`)
+- QObject singleton, registered as `backend` context property in QML.
+- Properties:
+  - `imagePath`, `classificationLabel`, `brightness`, `entropy`, `cannyEdgeDensity`, `usedTiebreaker`
+  - `roiFraction` (read/write, defaults to 0.80)
+  - `batchModel` (QAbstractListModel for batch results)
+  - Summary counters: `batchCountP50`, `batchCountP80`, `batchCountP150`, `batchCountErrors`, `batchTotal`
+- Slots: `classifyCurrentImage()`, `classifyDirectory(dirPath)`, `clearBatchResults()`
+- Signals: `classificationChanged`, `batchClassifyStarted(total)`, `batchClassifyProgress(current, total, filename)`, `batchClassifyFinished()`
+
+**ClassificationResultModel** (in classifierbackend.h/.cpp)
+- QAbstractListModel storing `ClassificationResult` items.
+- Roles: filename, label, brightness, entropy, canny, usedTiebreaker, isError, displayText.
+- Tracks counters for P50/P80/P150/ERROR.
+
+**Main.qml**
+- Dark theme (#1e1e2e base, #2a2a3c card, #7c8aff accent).
+- Top bar: app title, ROI spinbox (10–100%).
+- Tab bar: "Single Image" / "Batch Directory".
+- Single Image page:
+  - File picker button + path display + re-classify button.
+  - Image preview with ROI rectangle overlay.
+  - Result card: big colored label badge, tiebreaker indicator, detail grid (brightness, entropy, canny%, ROI), stage info text.
+- Batch Directory page:
+  - Directory picker + classify all button + clear button.
+  - Progress bar with file count.
+  - Scrollable ListView with columns: File, Result, Brightness, Entropy, Canny%, Note (⚡tie).
+  - Summary bar at bottom: Total, P50, P80, P150, Errors counts.
+
+### Build
+```
+export PATH="/opt/homebrew/bin:$HOME/Qt/Tools/Ninja:$PATH"
+cmake -S QtClassify/QtClassify -B QtClassify/QtClassify/build/Debug \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt@6 \
+    -DOpenCV_DIR=/opt/homebrew/opt/opencv \
+    -G Ninja
+cmake --build QtClassify/QtClassify/build/Debug
+```
+
+### Dependencies
+- Qt 6.10.2 (Quick, QuickControls2) — from Homebrew (`/opt/homebrew/opt/qt@6`)
+- OpenCV 4.13.0 (core, imgproc, imgcodecs) — from Homebrew (`/opt/homebrew/opt/opencv`)
+- macOS 15+ arm64, Apple Clang 21
 
 ## Focus Mode (P80 vs P150)
 `classify.py` now supports a `--p80p150` flag that classifies both P80 and P150 directories in one pass, showing per-image brightness/entropy/canny, a confusion matrix, and listing all misclassified images. Usage: `python classify.py --p80p150 Dataset/P80 Dataset/P150`
 
-## Architecture
+## Architecture (Python)
 
 ### Dataset
 - `Dataset/P50/` — 240 images, bright (mean brightness ~116)
@@ -49,14 +122,14 @@ Image classification project using OpenCV (cv2) to classify images into three gr
 | P150   | 173/173       | 100.0%   |
 | **Overall** | **629/629** | **100.0%** |
 
-### Classifier Script
-- `classify.py` — Main script using cv2 to classify images
-
 ## Key Files & Modules
-- `classify.py` — Image classification script (entropy + Canny tiebreaker)
+- `classify.py` — Python reference classifier (entropy + Canny tiebreaker)
 - `classify_v2.py` — Experimental script testing multiple alternative strategies
 - `analyze_features.py` — Feature distribution analysis across all three classes
 - `diagnose_hard_cases.py` — Diagnostic tool for analyzing hard cases with extra features
+- `QtClassify/QtClassify/classifier.h/.cpp` — C++ classifier (identical logic to classify.py)
+- `QtClassify/QtClassify/classifierbackend.h/.cpp` — QML-callable backend
+- `QtClassify/QtClassify/Main.qml` — Desktop GUI
 
 ## Key Decisions
 - ROI applied first, before any analysis, to exclude non-critical side regions.
@@ -67,3 +140,4 @@ Image classification project using OpenCV (cv2) to classify images into three gr
 - Canny edge density (thresholds 50/150) as tiebreaker in entropy ambiguity zone [3.77, 3.845].
 - Canny threshold 16.0% chosen with a clean 1.3% gap from the nearest misclassified case on each side.
 - Two-stage (three-step) classifier achieves 100% accuracy across all 629 images.
+- QtClassify C++ app mirrors all thresholds exactly for identical results.

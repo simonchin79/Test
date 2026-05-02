@@ -1,11 +1,19 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "classifierbackend.h"
 
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
+    app.setOrganizationName("QtClassify");
+    app.setApplicationName("QtClassify");
+
+    ClassifierBackend backend;
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("backend", &backend);
+
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,
@@ -14,5 +22,8 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.loadFromModule("QtClassify", "Main");
 
-    return QCoreApplication::exec();
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
+    return app.exec();
 }

@@ -1,0 +1,14 @@
+-rootPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify
+-cmake-output
+-output-file
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/qml_imports/appQtClassify_build.cmake
+-importPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug
+-importPath
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/QtClassify
+-importPath
+/opt/homebrew/opt/qt@6/share/qt/qml
+-qrcFiles
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/rcc/qmake_QtClassify.qrc
+/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/.qt/rcc/appQtClassify_raw_qml_0.qrc

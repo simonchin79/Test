@@ -5,14 +5,17 @@ It is always loaded as context so the agent can recall past work,
 decisions, open issues, and next steps.
 
 ## Recent Changes
+- **2025-01-21**: Built out `QtClassify/QtClassify/` C++/QML application using Qt 6.10.2 and OpenCV 4.13.0. Full three-stage classifier (brightness → entropy → Canny tiebreaker) ported from `classify.py` to C++. QML UI with single-image mode (preview + results) and batch-directory mode (progress bar + results table). Builds successfully on macOS arm64.
 - **2025-01-21**: Added Canny edge-density tiebreaker to `classify.py` Stage 2, resolving all 6 hard-overlap P80/P150 cases. Achieves **100% accuracy** across all 629 images (P50: 240/240, P80: 216/216, P150: 173/173).
-- Usage: `python classify.py --p80p150 Dataset/P80 Dataset/P150`
-- The `--p80p150` output now shows canny edge density and tiebreaker notes (← FIXED!, ← tie OK).
 
 ## Status
 - `classify.py` — three-step classifier using mean brightness (Stage 1), histogram entropy (Stage 2a), and Canny edge density tiebreaker (Stage 2b), with ROI cropping applied first.
-- Can classify single images or entire directories of images.
-- ROI crop (default 80% central region) applied before any analysis to exclude non-critical side areas.
+- **QtClassify C++/QML application** — fully built and compiles clean.
+  - `QtClassify/QtClassify/classifier.h` / `.cpp` — classification logic (identical thresholds to `classify.py`).
+  - `QtClassify/QtClassify/classifierbackend.h` / `.cpp` — QObject bridge exposing classifier to QML.
+  - `QtClassify/QtClassify/Main.qml` — dark-themed UI with Single Image and Batch Directory tabs.
+  - `QtClassify/QtClassify/main.cpp` — entry point, registers `ClassifierBackend` as QML context property.
+  - Build: `cmake -S QtClassify/QtClassify -B QtClassify/QtClassify/build/Debug -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt@6 -DOpenCV_DIR=/opt/homebrew/opt/opencv -G Ninja && cmake --build QtClassify/QtClassify/build/Debug`
 - **All 629 images classified correctly (100.0% accuracy).**
 
 ## Decisions
@@ -21,9 +24,9 @@ decisions, open issues, and next steps.
 - Stage 2b (Canny tiebreaker): canny edge density > 16.0% → P150, else P80.
   - Canny thresholds: low=50, high=150.
   - Ambiguity zone [3.77, 3.845] contains 28 images; all correctly classified by the tiebreaker.
-  - Of those 28, 6 were originally misclassified by entropy alone (now all fixed).
-- ROI: central 80% crop (10% trimmed from each side) applied as the very first step in `classify_image()`.
-- ROI fraction configurable via `--roi <0.0–1.0>` flag after the path argument.
+- ROI: central 80% crop (10% trimmed from each side) applied as the very first step.
+- QtClassify app: ROI configurable via spinbox (10–100%, default 80%).
+- QtClassify UI: dark theme (#1e1e2e base), P50=green, P80=cyan, P150=orange, ERROR=red.
 
 ## Resolved Hard Cases (all 6 now correctly classified by Canny tiebreaker)
 P80 (was misclassified as P150, now fixed):
@@ -36,6 +39,7 @@ P150 (was misclassified as P80, now fixed):
   - 20230530_103529_434_ID42_CH0_CLS3_ORT0_Ok.png (entropy=3.8353, canny=16.72)
 
 ## Open Issues / Next Steps
-- Add unit tests.
-- Consider the 3 P150 images with entropy 3.766–3.768 and low canny (14.9–15.9) that sit just below the ambiguity zone. They are correctly classified by entropy alone, but represent a boundary case worth monitoring.
-- The `classify_v2.py` experimental strategies could be cleaned up or removed now that the main classifier achieves 100%.
+- Add unit tests for the C++ classifier.
+- Run the QtClassify app against Dataset/ to verify 100% accuracy from C++ side.
+- Consider adding drag-and-drop support to the QML UI.
+- The `classify_v2.py` experimental strategies could be cleaned up.
