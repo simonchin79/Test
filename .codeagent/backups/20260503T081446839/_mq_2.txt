@@ -1,0 +1,80 @@
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: tabBar.bottom
+        anchors.bottom: parent.bottom
+        anchors.margins: 16
+        currentIndex: 0
+        interactive: false
+
+        // ════════════════════════════════════════════════════════════
+        // PAGE 0 — Single Image
+        // ════════════════════════════════════════════════════════════
+        Item {
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 12
+
+                // ---- Controls row ----
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: 10
+
+                    Button {
+                        text: "Select Image..."
+                        onClicked: fileDialog.open()
+
+                        background: Rectangle {
+                            color: accent
+                            radius: 8
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: "#ffffff"
+                            font.pixelSize: 13
+                            font.bold: true
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+                    }
+
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 36
+                        color: bgInput
+                        radius: 8
+                        border.color: "#444466"
+
+                        Text {
+                            anchors.fill: parent
+                            anchors.leftMargin: 12
+                            anchors.rightMargin: 12
+                            text: backend.imagePath || "No image selected"
+                            color: backend.imagePath ? textPrimary : textSecondary
+                            font.pixelSize: 12
+                            verticalAlignment: Text.AlignVCenter
+                            elide: Text.ElideMiddle
+                        }
+                    }
+
+                    Button {
+                        text: "Re-classify"
+                        enabled: backend.imagePath !== ""
+                        onClicked: backend.classifyCurrentImage()
+
+                        background: Rectangle {
+                            color: parent.enabled ? "#5a5a80" : "#333350"
+                            radius: 8
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: parent.enabled ? textPrimary : textSecondary
+                            font.pixelSize: 13
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+                    }
+                }
+
+                // ---- Image preview + result card ----
+                RowLayout {
+                    Layout.fillWidth: true

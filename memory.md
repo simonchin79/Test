@@ -112,3 +112,16 @@ P150 (was misclassified as P80, now fixed):
   `FileDialog` with `FolderDialog` (also from `QtQuick.Dialogs`, introduced in
   Qt 6.4) for `batchDirDialog` in `Main.qml`.  Kept the `selectedFolder` →
   `currentFolder` fallback for robustness on macOS.
+
+### 🧠 Decision (2026-05-03 07:02:29 UTC)
+**2026-05-03 (batch threading)**: Moved batch classification (`classifyDirectory`) off
+  the main thread to prevent GUI freezes. Created `ClassifierWorker : QObject`
+  in `classifierbackend.h/.cpp` that runs in a `QThread`. The worker emits
+  `started`, `progress`, `resultReady`, and `finished` signals; the backend
+  connects them on the main thread to update the `ClassificationResultModel`
+  and progress bar live. `ClassificationResult` is now registered as a Qt
+  meta-type via `Q_DECLARE_METATYPE` + `qRegisterMetaType` for cross-thread
+  signal delivery. `ClassifierBackend` gained `m_workerThread`, `m_worker`,
+  `m_batchRunning`, and `stopWorkerThread()` for lifecycle management.
+  Single-image `classifyCurrentImage()` remains on the main thread (fast
+  enough for one image).

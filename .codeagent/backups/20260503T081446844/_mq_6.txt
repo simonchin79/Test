@@ -1,0 +1,80 @@
+                        onClicked: backend.clearBatchResults()
+
+                        background: Rectangle {
+                            color: parent.enabled ? "#5a5a80" : "#333350"
+                            radius: 8
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: parent.enabled ? textPrimary : textSecondary
+                            font.pixelSize: 13
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+                    }
+                }
+
+                // ---- Progress bar ----
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 6
+                    color: bgInput
+                    radius: 3
+                    visible: batchProgress.running || batchProgress.value > 0
+
+                    Rectangle {
+                        width: parent.width * (batchProgress.value / Math.max(batchProgress.to, 1))
+                        height: parent.height
+                        color: successColor
+                        radius: 3
+                    }
+                }
+
+                Text {
+                    text: batchProgress.running
+                          ? "Processing " + batchProgress.value + " / " + batchProgress.to
+                          : (backend.batchTotal > 0
+                             ? "Done — " + backend.batchTotal + " images classified"
+                             : "")
+                    color: textSecondary
+                    font.pixelSize: 12
+                    visible: text !== ""
+                }
+
+                // ---- Results table ----
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    color: bgCard
+                    radius: 12
+                    border.color: "#333355"
+
+                    // Column headers
+                    Row {
+                        id: headerRow
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.leftMargin: 16
+                        anchors.rightMargin: 16
+                        anchors.topMargin: 10
+                        height: 28
+                        spacing: 0
+
+                        Text { text: "File";               color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;
+                               width: parent.width * 0.40; elide: Text.ElideRight }
+                        Text { text: "Result";             color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;
+                               width: parent.width * 0.12 }
+                        Text { text: "Brightness";         color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;
+                               width: parent.width * 0.12 }
+                        Text { text: "Entropy";            color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;
+                               width: parent.width * 0.14 }
+                        Text { text: "Canny%";             color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;
+                               width: parent.width * 0.12 }
+                        Text { text: "Note";               color: textSecondary;
+                               font.pixelSize: 11; font.bold: true;

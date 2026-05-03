@@ -1,0 +1,80 @@
+                    border.color: "#444466"
+                }
+                contentItem: TextInput {
+                    color: textPrimary
+                    font.pixelSize: 13
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+
+            Text {
+                text: "%"
+                color: textSecondary
+                font.pixelSize: 13
+            }
+        }
+    }
+
+    // ── Tab bar ─────────────────────────────────────────────────────
+    Rectangle {
+        id: tabBar
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: topBar.bottom
+        height: 44
+        color: bgDark
+
+        Row {
+            anchors.fill: parent
+            anchors.leftMargin: 16
+            spacing: 4
+
+            TabButton {
+                id: singleTab
+                text: "Single Image"
+                width: 160
+                height: 40
+                checked: true
+                onClicked: swipeView.currentIndex = 0
+
+                background: Rectangle {
+                    color: singleTab.checked ? bgCard : "transparent"
+                    radius: 8
+                }
+                contentItem: Text {
+                    text: singleTab.text
+                    color: singleTab.checked ? textPrimary : textSecondary
+                    font.pixelSize: 14
+                    font.bold: singleTab.checked
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+
+            TabButton {
+                id: batchTab
+                text: "Batch Directory"
+                width: 180
+                height: 40
+                onClicked: swipeView.currentIndex = 1
+
+                background: Rectangle {
+                    color: batchTab.checked ? bgCard : "transparent"
+                    radius: 8
+                }
+                contentItem: Text {
+                    text: batchTab.text
+                    color: batchTab.checked ? textPrimary : textSecondary
+                    font.pixelSize: 14
+                    font.bold: batchTab.checked
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
+            }
+        }
+    }
+
+    // ── SwipeView (Single / Batch pages) ────────────────────────────
+    SwipeView {
+        id: swipeView

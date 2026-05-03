@@ -1062,8 +1062,31 @@ CMakeFiles/appQtClassify.dir/main.cpp.o: \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQml.framework/Headers/qqmlabstracturlinterceptor.h \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQml.framework/Headers/QQmlContext \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtQml.framework/Headers/qqmlcontext.h \
+  /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/QMetaType \
   /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/classifierbackend.h \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/QString \
+  /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/QThread \
+  /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/qthread.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/future \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__thread/thread.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/sstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/format \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/queue.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/stack \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/stack.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/print \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/unistd.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/thread \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__thread/this_thread.h \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/QAbstractListModel \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/qabstractitemmodel.h \
   /Users/simonchin79gmail.com/Qt/6.10.2/macos/lib/QtCore.framework/Headers/QUrl \
@@ -1098,22 +1121,6 @@ CMakeFiles/appQtClassify.dir/main.cpp.o: \
   /opt/homebrew/Cellar/opencv/4.13.0_9/include/opencv4/opencv2/core/operations.hpp \
   /opt/homebrew/Cellar/opencv/4.13.0_9/include/opencv4/opencv2/core/cvstd.inl.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/complex \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/sstream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/istream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/ostream \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/format \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/queue \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/deque.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/queue.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/deque \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/stack \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/__fwd/stack.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/c++/v1/print \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk/usr/include/unistd.h \
   /opt/homebrew/Cellar/opencv/4.13.0_9/include/opencv4/opencv2/core/utility.hpp \
   /opt/homebrew/Cellar/opencv/4.13.0_9/include/opencv4/opencv2/core/optim.hpp \
   /opt/homebrew/Cellar/opencv/4.13.0_9/include/opencv4/opencv2/core/ovx.hpp \

@@ -1,0 +1,80 @@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQuick.Dialogs
+
+Window {
+    id: mainWindow
+    width: 900
+    height: 700
+    minimumWidth: 700
+    minimumHeight: 500
+    visible: true
+    title: qsTr("QtClassify — Image Classifier")
+    color: "#1e1e2e"
+
+    // ── Colour palette ──────────────────────────────────────────────
+    readonly property color bgDark:        "#1e1e2e"
+    readonly property color bgCard:        "#2a2a3c"
+    readonly property color bgInput:       "#363650"
+    readonly property color accent:        "#7c8aff"
+    readonly property color textPrimary:   "#e0e0f0"
+    readonly property color textSecondary: "#a0a0c0"
+    readonly property color p50Color:      "#50fa7b"
+    readonly property color p80Color:      "#8be9fd"
+    readonly property color p150Color:     "#ffb86c"
+    readonly property color errorColor:    "#ff5555"
+    readonly property color successColor:  "#50fa7b"
+
+    function labelColor(label) {
+        switch (label) {
+            case "P50":  return p50Color;
+            case "P80":  return p80Color;
+            case "P150": return p150Color;
+            default:     return errorColor;
+        }
+    }
+
+    // ── Top bar ─────────────────────────────────────────────────────
+    Rectangle {
+        id: topBar
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+        height: 52
+        color: "#16162a"
+
+        RowLayout {
+            anchors.fill: parent
+            anchors.leftMargin: 16
+            anchors.rightMargin: 16
+            spacing: 12
+
+            Text {
+                text: "QtClassify"
+                color: textPrimary
+                font.pixelSize: 20
+                font.bold: true
+            }
+
+            Item { Layout.fillWidth: true }
+
+            Text {
+                text: "ROI:"
+                color: textSecondary
+                font.pixelSize: 13
+            }
+
+            SpinBox {
+                id: roiSpin
+                from: 10
+                to: 100
+                value: 80
+                stepSize: 5
+                editable: true
+                Layout.preferredWidth: 80
+                onValueChanged: backend.roiFraction = value / 100.0
+
+                background: Rectangle {
+                    color: bgInput
+                    radius: 6

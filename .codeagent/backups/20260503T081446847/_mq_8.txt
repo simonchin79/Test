@@ -1,0 +1,80 @@
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                            }
+                        }
+                    }
+
+                    // Summary bar at bottom
+                    Rectangle {
+                        id: summaryRow
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        height: 36
+                        color: "#1a1a30"
+                        radius: 12
+
+                        Rectangle {
+                            // anti-radius top corners to sit flush
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                            anchors.bottom: parent.bottom
+                            height: parent.height / 2
+                            color: parent.color
+                        }
+
+                        RowLayout {
+                            anchors.fill: parent
+                            anchors.leftMargin: 20
+                            anchors.rightMargin: 20
+                            spacing: 24
+
+                            Text {
+                                text: "Total: " + backend.batchTotal
+                                color: textPrimary
+                                font.pixelSize: 12
+                                font.bold: true
+                            }
+                            Text {
+                                text: "P50: " + backend.batchCountP50
+                                color: p50Color
+                                font.pixelSize: 12
+                                font.bold: true
+                            }
+                            Text {
+                                text: "P80: " + backend.batchCountP80
+                                color: p80Color
+                                font.pixelSize: 12
+                                font.bold: true
+                            }
+                            Text {
+                                text: "P150: " + backend.batchCountP150
+                                color: p150Color
+                                font.pixelSize: 12
+                                font.bold: true
+                            }
+                            Text {
+                                text: "Errors: " + backend.batchCountErrors
+                                color: errorColor
+                                font.pixelSize: 12
+                                font.bold: true
+                                visible: backend.batchCountErrors > 0
+                            }
+                        }
+                    }
+
+                    // Placeholder when empty
+                    Text {
+                        anchors.centerIn: parent
+                        text: "Select a directory and click\n\"Classify All\" to begin"
+                        color: textSecondary
+                        font.pixelSize: 14
+                        horizontalAlignment: Text.AlignHCenter
+                        visible: backend.batchTotal === 0 && !batchProgress.running
+                    }
+                }
+            }
+        }
+    }
+
+    // ── Progress indicator (internal) ───────────────────────────────

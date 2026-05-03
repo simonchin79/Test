@@ -1,0 +1,80 @@
+        // PAGE 1 — Batch Directory
+        // ════════════════════════════════════════════════════════════
+        Item {
+            ColumnLayout {
+                anchors.fill: parent
+                spacing: 12
+
+                // ---- Controls row ----
+                RowLayout {
+                    Layout.fillWidth: true
+                    spacing: 10
+
+                    Button {
+                        text: "Select Directory..."
+                        onClicked: batchDirDialog.open()
+
+                        background: Rectangle {
+                            color: accent
+                            radius: 8
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: "#ffffff"
+                            font.pixelSize: 13
+                            font.bold: true
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+                    }
+
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.preferredHeight: 36
+                        color: bgInput
+                        radius: 8
+                        border.color: "#444466"
+
+                        Text {
+                            anchors.fill: parent
+                            anchors.leftMargin: 12
+                            anchors.rightMargin: 12
+                            text: batchDirText.text || "No directory selected"
+                            color: batchDirText.text ? textPrimary : textSecondary
+                            font.pixelSize: 12
+                            verticalAlignment: Text.AlignVCenter
+                            elide: Text.ElideMiddle
+                        }
+                    }
+
+                    Text {
+                        id: batchDirText
+                        visible: false
+                    }
+
+                    Button {
+                        text: batchProgress.running ? "Classifying..." : "Classify All"
+                        enabled: batchDirText.text !== "" && !batchProgress.running
+                        onClicked: {
+                            backend.clearBatchResults()
+                            backend.classifyDirectory(batchDirText.text);
+                        }
+
+                        background: Rectangle {
+                            color: parent.enabled ? "#50fa7b" : "#333350"
+                            opacity: parent.enabled ? 0.9 : 0.5
+                            radius: 8
+                        }
+                        contentItem: Text {
+                            text: parent.text
+                            color: parent.enabled ? "#1e1e2e" : textSecondary
+                            font.pixelSize: 13
+                            font.bold: true
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
+                        }
+                    }
+
+                    Button {
+                        text: "Clear"
+                        enabled: backend.batchTotal > 0 && !batchProgress.running

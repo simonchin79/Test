@@ -16,7 +16,7 @@
                         {
                             "codegenResult": 0,
                             "column": 23,
-                            "durationMicroseconds": 0,
+                            "durationMicroseconds": 1000,
                             "functionName": "left",
                             "line": 41,
                             "message": ""
@@ -1767,26 +1767,18 @@
                         },
                         {
                             "codegenResult": 2,
-                            "column": 19,
-                            "durationMicroseconds": 0,
-                            "functionName": "fileMode",
-                            "line": 743,
-                            "message": "Cannot load property OpenFolder from const QMetaObject."
-                        },
-                        {
-                            "codegenResult": 2,
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 745,
-                            "message": "Cannot access value for name selectedFolder"
+                            "line": 744,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "target",
-                            "line": 762,
+                            "line": 760,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1794,7 +1786,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyStarted",
-                            "line": 763,
+                            "line": 761,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1802,7 +1794,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyProgress",
-                            "line": 768,
+                            "line": 766,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1810,7 +1802,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyFinished",
-                            "line": 772,
+                            "line": 770,
                             "message": ""
                         }
                     ],

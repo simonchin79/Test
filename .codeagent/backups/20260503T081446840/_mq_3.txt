@@ -1,0 +1,80 @@
+                    Layout.fillHeight: true
+                    spacing: 16
+
+                    // Image preview
+                    Rectangle {
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        Layout.preferredWidth: 60
+                        color: bgCard
+                        radius: 12
+                        border.color: "#333355"
+                        clip: true
+
+                        Image {
+                            id: previewImage
+                            anchors.fill: parent
+                            anchors.margins: 8
+                            fillMode: Image.PreserveAspectFit
+                            source: backend.imagePath ? "file://" + backend.imagePath : ""
+                            visible: backend.imagePath !== ""
+
+                            Rectangle {
+                                anchors.centerIn: parent
+                                width: roiSpin.value / 100.0 * Math.min(parent.width, parent.height)
+                                height: roiSpin.value / 100.0 * Math.min(parent.width, parent.height)
+                                color: "transparent"
+                                border.color: "#7c8aff40"
+                                border.width: 2
+                                visible: backend.imagePath !== ""
+                            }
+                        }
+
+                        Text {
+                            anchors.centerIn: parent
+                            text: "Select an image to preview"
+                            color: textSecondary
+                            font.pixelSize: 14
+                            horizontalAlignment: Text.AlignHCenter
+                            visible: backend.imagePath === ""
+                        }
+                    }
+
+                    // Result card
+                    Rectangle {
+                        Layout.preferredWidth: 300
+                        Layout.fillHeight: true
+                        color: bgCard
+                        radius: 12
+                        border.color: "#333355"
+
+                        ColumnLayout {
+                            anchors.fill: parent
+                            anchors.margins: 20
+                            spacing: 16
+
+                            Text {
+                                text: "Classification Result"
+                                color: textSecondary
+                                font.pixelSize: 13
+                                font.bold: true
+                                visible: backend.imagePath !== ""
+                            }
+
+                            // Big label badge
+                            Rectangle {
+                                Layout.alignment: Qt.AlignHCenter
+                                implicitWidth: labelText.implicitWidth + 40
+                                implicitHeight: 56
+                                radius: 28
+                                color: labelColor(backend.classificationLabel)
+                                opacity: 0.2
+                                visible: backend.imagePath !== ""
+                            }
+                            Text {
+                                id: labelText
+                                Layout.alignment: Qt.AlignHCenter
+                                text: backend.classificationLabel || "—"
+                                color: labelColor(backend.classificationLabel)
+                                font.pixelSize: 32
+                                font.bold: true

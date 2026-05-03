@@ -3,7 +3,7 @@
         "classes": [
             {
                 "className": "ClassificationResultModel",
-                "lineNumber": 14,
+                "lineNumber": 15,
                 "object": true,
                 "qualifiedClassName": "ClassificationResultModel",
                 "superClasses": [
@@ -14,8 +14,98 @@
                 ]
             },
             {
+                "className": "ClassifierWorker",
+                "lineNumber": 58,
+                "object": true,
+                "qualifiedClassName": "ClassifierWorker",
+                "signals": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "totalFiles",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 0,
+                        "lineNumber": 72,
+                        "name": "started",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "current",
+                                "type": "int"
+                            },
+                            {
+                                "name": "total",
+                                "type": "int"
+                            },
+                            {
+                                "name": "filename",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 73,
+                        "name": "progress",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "result",
+                                "type": "ClassificationResult"
+                            }
+                        ],
+                        "index": 2,
+                        "lineNumber": 74,
+                        "name": "resultReady",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "index": 3,
+                        "lineNumber": 75,
+                        "name": "finished",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "errorMessage",
+                                "type": "QString"
+                            }
+                        ],
+                        "index": 4,
+                        "lineNumber": 76,
+                        "name": "errorOccurred",
+                        "returnType": "void"
+                    }
+                ],
+                "slots": [
+                    {
+                        "access": "public",
+                        "index": 5,
+                        "lineNumber": 69,
+                        "name": "process",
+                        "returnType": "void"
+                    }
+                ],
+                "superClasses": [
+                    {
+                        "access": "public",
+                        "name": "QObject"
+                    }
+                ]
+            },
+            {
                 "className": "ClassifierBackend",
-                "lineNumber": 57,
+                "lineNumber": 90,
                 "object": true,
                 "properties": [
                     {
@@ -23,7 +113,7 @@
                         "designable": true,
                         "final": false,
                         "index": 0,
-                        "lineNumber": 62,
+                        "lineNumber": 95,
                         "name": "imagePath",
                         "notify": "imagePathChanged",
                         "read": "imagePath",
@@ -39,7 +129,7 @@
                         "designable": true,
                         "final": false,
                         "index": 1,
-                        "lineNumber": 64,
+                        "lineNumber": 97,
                         "name": "classificationLabel",
                         "notify": "classificationChanged",
                         "read": "classificationLabel",
@@ -54,7 +144,7 @@
                         "designable": true,
                         "final": false,
                         "index": 2,
-                        "lineNumber": 66,
+                        "lineNumber": 99,
                         "name": "brightness",
                         "notify": "classificationChanged",
                         "read": "brightness",
@@ -69,7 +159,7 @@
                         "designable": true,
                         "final": false,
                         "index": 3,
-                        "lineNumber": 68,
+                        "lineNumber": 101,
                         "name": "entropy",
                         "notify": "classificationChanged",
                         "read": "entropy",
@@ -84,7 +174,7 @@
                         "designable": true,
                         "final": false,
                         "index": 4,
-                        "lineNumber": 70,
+                        "lineNumber": 103,
                         "name": "cannyEdgeDensity",
                         "notify": "classificationChanged",
                         "read": "cannyEdgeDensity",
@@ -99,7 +189,7 @@
                         "designable": true,
                         "final": false,
                         "index": 5,
-                        "lineNumber": 72,
+                        "lineNumber": 105,
                         "name": "usedTiebreaker",
                         "notify": "classificationChanged",
                         "read": "usedTiebreaker",
@@ -114,7 +204,7 @@
                         "designable": true,
                         "final": false,
                         "index": 6,
-                        "lineNumber": 74,
+                        "lineNumber": 107,
                         "name": "lastError",
                         "notify": "lastErrorChanged",
                         "read": "lastError",
@@ -129,7 +219,7 @@
                         "designable": true,
                         "final": false,
                         "index": 7,
-                        "lineNumber": 78,
+                        "lineNumber": 111,
                         "name": "roiFraction",
                         "notify": "roiFractionChanged",
                         "read": "roiFraction",
@@ -145,7 +235,7 @@
                         "designable": true,
                         "final": false,
                         "index": 8,
-                        "lineNumber": 82,
+                        "lineNumber": 115,
                         "name": "batchModel",
                         "read": "batchModel",
                         "required": false,
@@ -159,7 +249,7 @@
                         "designable": true,
                         "final": false,
                         "index": 9,
-                        "lineNumber": 85,
+                        "lineNumber": 118,
                         "name": "batchCountP50",
                         "notify": "batchModelChanged",
                         "read": "batchCountP50",
@@ -174,7 +264,7 @@
                         "designable": true,
                         "final": false,
                         "index": 10,
-                        "lineNumber": 86,
+                        "lineNumber": 119,
                         "name": "batchCountP80",
                         "notify": "batchModelChanged",
                         "read": "batchCountP80",
@@ -189,7 +279,7 @@
                         "designable": true,
                         "final": false,
                         "index": 11,
-                        "lineNumber": 87,
+                        "lineNumber": 120,
                         "name": "batchCountP150",
                         "notify": "batchModelChanged",
                         "read": "batchCountP150",
@@ -204,7 +294,7 @@
                         "designable": true,
                         "final": false,
                         "index": 12,
-                        "lineNumber": 88,
+                        "lineNumber": 121,
                         "name": "batchCountErrors",
                         "notify": "batchModelChanged",
                         "read": "batchCountErrors",
@@ -219,7 +309,7 @@
                         "designable": true,
                         "final": false,
                         "index": 13,
-                        "lineNumber": 89,
+                        "lineNumber": 122,
                         "name": "batchTotal",
                         "notify": "batchModelChanged",
                         "read": "batchTotal",
@@ -235,35 +325,35 @@
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 123,
+                        "lineNumber": 156,
                         "name": "imagePathChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 1,
-                        "lineNumber": 124,
+                        "lineNumber": 157,
                         "name": "classificationChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 2,
-                        "lineNumber": 125,
+                        "lineNumber": 158,
                         "name": "lastErrorChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
-                        "lineNumber": 126,
+                        "lineNumber": 159,
                         "name": "roiFractionChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 4,
-                        "lineNumber": 127,
+                        "lineNumber": 160,
                         "name": "batchModelChanged",
                         "returnType": "void"
                     },
@@ -276,7 +366,7 @@
                             }
                         ],
                         "index": 5,
-                        "lineNumber": 129,
+                        "lineNumber": 162,
                         "name": "batchClassifyStarted",
                         "returnType": "void"
                     },
@@ -297,14 +387,14 @@
                             }
                         ],
                         "index": 6,
-                        "lineNumber": 130,
+                        "lineNumber": 163,
                         "name": "batchClassifyProgress",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 7,
-                        "lineNumber": 132,
+                        "lineNumber": 165,
                         "name": "batchClassifyFinished",
                         "returnType": "void"
                     }
@@ -313,7 +403,7 @@
                     {
                         "access": "public",
                         "index": 8,
-                        "lineNumber": 118,
+                        "lineNumber": 151,
                         "name": "classifyCurrentImage",
                         "returnType": "void"
                     },
@@ -326,14 +416,14 @@
                             }
                         ],
                         "index": 9,
-                        "lineNumber": 119,
+                        "lineNumber": 152,
                         "name": "classifyDirectory",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 10,
-                        "lineNumber": 120,
+                        "lineNumber": 153,
                         "name": "clearBatchResults",
                         "returnType": "void"
                     }

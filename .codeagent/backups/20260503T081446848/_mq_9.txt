@@ -1,0 +1,54 @@
+    QtObject {
+        id: batchProgress
+        property int value: 0
+        property int to: 1
+        property bool running: false
+    }
+
+    // ── File dialogs ────────────────────────────────────────────────
+    FileDialog {
+        id: fileDialog
+        title: "Select an image"
+        nameFilters: ["Image files (*.png *.jpg *.jpeg *.bmp *.tif *.tiff)"]
+        onAccepted: {
+            if (selectedFile) {
+                backend.imagePath = selectedFile.toString();
+            }
+        }
+    }
+
+    FolderDialog {
+        id: batchDirDialog
+        title: "Select a directory"
+        acceptLabel: "Select"
+        onAccepted: {
+            // FolderDialog is the correct Qt 6 type for directory
+            // selection.  On macOS the native NSOpenPanel can still
+            // fail to populate selectedFolder when the user navigates
+            // INTO a directory and clicks Select, so we fall back to
+            // currentFolder (the directory the panel is currently
+            // showing) when selectedFolder is empty.
+            var folder = selectedFolder ? selectedFolder : currentFolder;
+            if (folder) {
+                batchDirText.text = folder.toString();
+            }
+        }
+    }
+
+    // ── Backend signal connections ──────────────────────────────────
+    Connections {
+        target: backend
+        function onBatchClassifyStarted(total) {
+            batchProgress.value = 0;
+            batchProgress.to = total;
+            batchProgress.running = true;
+        }
+        function onBatchClassifyProgress(current, total, filename) {
+            batchProgress.value = current;
+            batchProgress.to = total;
+        }
+        function onBatchClassifyFinished() {
+            batchProgress.running = false;
+        }
+    }
+}

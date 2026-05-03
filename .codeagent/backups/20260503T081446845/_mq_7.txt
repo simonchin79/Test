@@ -1,0 +1,80 @@
+                               width: parent.width * 0.10 }
+                    }
+
+                    Rectangle {
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: headerRow.bottom
+                        anchors.topMargin: 4
+                        height: 1
+                        color: "#333355"
+                    }
+
+                    ListView {
+                        id: batchList
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: headerRow.bottom
+                        anchors.topMargin: 8
+                        anchors.bottom: summaryRow.top
+                        anchors.bottomMargin: 8
+                        anchors.leftMargin: 8
+                        anchors.rightMargin: 8
+                        clip: true
+                        spacing: 2
+                        model: backend.batchModel
+
+                        delegate: Rectangle {
+                            width: batchList.width
+                            height: 28
+                            color: index % 2 === 0 ? "transparent" : "#ffffff04"
+                            radius: 4
+
+                            Row {
+                                anchors.fill: parent
+                                anchors.leftMargin: 8
+                                anchors.rightMargin: 8
+                                spacing: 0
+
+                                Text {
+                                    text: filename ? filename.split('/').pop().split('\\').pop() : ""
+                                    color: isError ? errorColor : textPrimary
+                                    font.pixelSize: 11
+                                    width: parent.width * 0.40
+                                    elide: Text.ElideRight
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                Text {
+                                    text: label
+                                    color: mainWindow.labelColor(label)
+                                    font.pixelSize: 11
+                                    font.bold: true
+                                    width: parent.width * 0.12
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                Text {
+                                    text: brightness.toFixed(1)
+                                    color: textPrimary
+                                    font.pixelSize: 11
+                                    width: parent.width * 0.12
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                Text {
+                                    text: entropy.toFixed(4)
+                                    color: textPrimary
+                                    font.pixelSize: 11
+                                    width: parent.width * 0.14
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                Text {
+                                    text: canny.toFixed(2)
+                                    color: textPrimary
+                                    font.pixelSize: 11
+                                    width: parent.width * 0.12
+                                    verticalAlignment: Text.AlignVCenter
+                                }
+                                Text {
+                                    text: usedTiebreaker ? "tie" : ""
+                                    color: p150Color
+                                    font.pixelSize: 10
+                                    width: parent.width * 0.10

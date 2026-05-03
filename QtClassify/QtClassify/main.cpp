@@ -2,6 +2,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QMetaType>
 #include "classifierbackend.h"
 
 int main(int argc, char *argv[])
@@ -18,6 +19,9 @@ int main(int argc, char *argv[])
     // Main.qml to avoid triggering the CopyEmojiImage path entirely,
     // which sidesteps the Homebrew/system libpng symbol conflict.
     qputenv("QSG_RENDER_LOOP", "basic");
+
+    qRegisterMetaType<ClassificationResult>("ClassificationResult");
+
     QGuiApplication app(argc, argv);
     app.setOrganizationName("QtClassify");
     app.setApplicationName("QtClassify");

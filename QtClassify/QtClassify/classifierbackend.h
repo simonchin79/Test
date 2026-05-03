@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QThread>
 #include <QList>
 #include <QAbstractListModel>
 #include <QUrl>
@@ -49,6 +50,38 @@ private:
     int m_countP80   = 0;
     int m_countP150  = 0;
     int m_countErrors = 0;
+};
+
+// ============================================================================
+// ClassifierWorker — runs batch classification in a worker thread
+// ============================================================================
+class ClassifierWorker : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit ClassifierWorker(QObject *parent = nullptr);
+
+    void setDirectory(const QString &dirPath);
+    void setRoiFraction(double fraction);
+
+public slots:
+    void process();
+
+signals:
+    void started(int totalFiles);
+    void progress(int current, int total, const QString &filename);
+    void resultReady(ClassificationResult result);
+    void finished();
+    void errorOccurred(const QString &errorMessage);
+
+private:
+    QString m_dirPath;
+    double m_roiFraction = 0.80;
+
+    QString localFilePathFromUrl(const QString &urlOrPath) const;
+
+    static const QStringList &imageNameFilters();
 };
 
 // ============================================================================
@@ -139,6 +172,13 @@ private:
     ClassificationResult m_lastResult;
     QString m_lastError;
     ClassificationResultModel *m_batchModel = nullptr;
+
+    // Worker-thread state
+    QThread          *m_workerThread = nullptr;
+    ClassifierWorker *m_worker       = nullptr;
+    bool              m_batchRunning = false;
+
+    void stopWorkerThread();
 };
 
 #endif // CLASSIFIERBACKEND_H

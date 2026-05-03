@@ -1,6 +1,7 @@
 #ifndef CLASSIFIER_H
 #define CLASSIFIER_H
 
+#include <QMetaType>
 #include <string>
 #include <opencv2/opencv.hpp>
 
@@ -13,6 +14,9 @@ struct ClassificationResult
     double cannyEdgeDensity = 0.0;
     bool usedTiebreaker = false;
 };
+
+// Allow ClassificationResult to travel across Qt signal/slot thread boundaries
+Q_DECLARE_METATYPE(ClassificationResult)
 
 class Classifier
 {

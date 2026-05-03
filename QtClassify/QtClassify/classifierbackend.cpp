@@ -1,6 +1,7 @@
 #include "classifierbackend.h"
 #include <QDir>
 #include <QFileInfo>
+#include <QMetaObject>
 #include <QUrl>
 #include <algorithm>
 
@@ -85,6 +86,68 @@ void ClassificationResultModel::clear()
     m_countP150 = 0;
     m_countErrors = 0;
     endResetModel();
+}
+
+// ============================================================================
+// ClassifierWorker
+// ============================================================================
+
+const QStringList &ClassifierWorker::imageNameFilters()
+{
+    static const QStringList filters = {
+        "*.png", "*.jpg", "*.jpeg", "*.bmp", "*.tiff", "*.tif"
+    };
+    return filters;
+}
+
+ClassifierWorker::ClassifierWorker(QObject *parent)
+    : QObject(parent)
+{
+}
+
+void ClassifierWorker::setDirectory(const QString &dirPath)
+{
+    m_dirPath = localFilePathFromUrl(dirPath);
+}
+
+void ClassifierWorker::setRoiFraction(double fraction)
+{
+    m_roiFraction = fraction;
+}
+
+void ClassifierWorker::process()
+{
+    QDir qdir(m_dirPath);
+    if (!qdir.exists()) {
+        emit errorOccurred(
+            QStringLiteral("Directory not found: %1").arg(m_dirPath));
+        emit finished();
+        return;
+    }
+
+    qdir.setNameFilters(imageNameFilters());
+    qdir.setFilter(QDir::Files | QDir::Readable);
+    qdir.setSorting(QDir::Name);
+
+    const QFileInfoList files = qdir.entryInfoList();
+    const int total = files.size();
+
+    emit started(total);
+
+    Classifier classifier(m_roiFraction);
+
+    for (int i = 0; i < total; ++i) {
+        const QString path = files.at(i).absoluteFilePath();
+        const QString filename = files.at(i).fileName();
+
+        emit progress(i + 1, total, filename);
+
+        ClassificationResult res = classifier.classifyImage(path.toStdString());
+        res.filename = path.toStdString();  // store full path for display
+        emit resultReady(res);
+    }
+
+    emit finished();
 }
 
 // ============================================================================
@@ -202,45 +265,90 @@ void ClassifierBackend::classifyCurrentImage()
 
 void ClassifierBackend::classifyDirectory(const QString &dirPath)
 {
-    const QString dir = localFilePathFromUrl(dirPath);
-    QDir qdir(dir);
-    if (!qdir.exists()) {
-        m_lastError = QStringLiteral("Directory not found: %1").arg(dir);
-        emit lastErrorChanged();
+    if (m_batchRunning) {
+        // Already processing — button is disabled in QML, but guard anyway
         return;
     }
 
-    QStringList nameFilters;
-    nameFilters << "*.png" << "*.jpg" << "*.jpeg" << "*.bmp" << "*.tiff" << "*.tif";
-    qdir.setNameFilters(nameFilters);
-    qdir.setFilter(QDir::Files | QDir::Readable);
-    qdir.setSorting(QDir::Name);
+    const QString dir = localFilePathFromUrl(dirPath);
 
-    const QFileInfoList files = qdir.entryInfoList();
-    const int total = files.size();
+    // Clean up any previous worker/thread
+    stopWorkerThread();
 
+    // Clear previous batch results
     m_batchModel->clear();
     emit batchModelChanged();
-    emit batchClassifyStarted(total);
 
-    for (int i = 0; i < total; ++i) {
-        const QString path = files.at(i).absoluteFilePath();
-        emit batchClassifyProgress(i + 1, total,
-                                   files.at(i).fileName());
+    m_batchRunning = true;
 
-        ClassificationResult res;
-        try {
-            res = m_classifier.classifyImage(path.toStdString());
-        } catch (const std::exception &e) {
-            res.label = "ERROR";
-            res.filename = path.toStdString();
-        }
-        res.filename = path.toStdString();  // store full path for display
+    // Create worker + thread
+    m_worker = new ClassifierWorker();  // no parent — will be moved to thread
+    m_workerThread = new QThread(this);
+    m_worker->moveToThread(m_workerThread);
+
+    // Pass parameters to worker
+    m_worker->setDirectory(dir);
+    m_worker->setRoiFraction(m_classifier.roiFraction());
+
+    // --- Connect signals (all cross-thread, queued automatically) ---
+
+    // Thread lifecycle
+    QObject::connect(m_workerThread, &QThread::started,
+                     m_worker,       &ClassifierWorker::process);
+    QObject::connect(m_worker,       &ClassifierWorker::finished,
+                     m_workerThread, &QThread::quit);
+    QObject::connect(m_worker,       &ClassifierWorker::finished,
+                     m_worker,       &QObject::deleteLater);
+    QObject::connect(m_workerThread, &QThread::finished,
+                     m_workerThread, &QObject::deleteLater);
+
+    // Forward signals to backend
+    QObject::connect(m_worker, &ClassifierWorker::started,
+                     this,     &ClassifierBackend::batchClassifyStarted);
+    QObject::connect(m_worker, &ClassifierWorker::progress,
+                     this,     &ClassifierBackend::batchClassifyProgress);
+
+    // Handle each result on the main thread — update model + notify QML
+    QObject::connect(m_worker, &ClassifierWorker::resultReady,
+                     this,     [this](ClassificationResult res) {
         m_batchModel->addResult(res);
-    }
+        emit batchModelChanged();
+    });
 
-    emit batchModelChanged();
-    emit batchClassifyFinished();
+    // Error handling
+    QObject::connect(m_worker, &ClassifierWorker::errorOccurred,
+                     this,     [this](const QString &msg) {
+        m_lastError = msg;
+        emit lastErrorChanged();
+    });
+
+    // When done, reset state
+    QObject::connect(m_worker, &ClassifierWorker::finished,
+                     this,     [this]() {
+        m_batchRunning = false;
+        m_worker = nullptr;
+        m_workerThread = nullptr;
+        emit batchModelChanged();
+        emit batchClassifyFinished();
+    });
+
+    m_workerThread->start();
+}
+
+void ClassifierBackend::stopWorkerThread()
+{
+    if (m_workerThread) {
+        m_workerThread->quit();
+        m_workerThread->wait(5000);  // wait up to 5 s for graceful shutdown
+        // If still running after wait, terminate (shouldn't happen normally)
+        if (m_workerThread->isRunning()) {
+            m_workerThread->terminate();
+            m_workerThread->wait(2000);
+        }
+        m_workerThread = nullptr;
+        m_worker = nullptr;
+        m_batchRunning = false;
+    }
 }
 
 void ClassifierBackend::clearBatchResults()
@@ -257,6 +365,16 @@ QString ClassifierBackend::localFilePathFromUrl(const QString &urlOrPath) const
     if (url.isLocalFile())
         return url.toLocalFile();
     // Strip "file://" prefix if present (handles various Qt versions)
+    if (urlOrPath.startsWith("file://"))
+        return QUrl(urlOrPath).toLocalFile();
+    return urlOrPath;
+}
+
+QString ClassifierWorker::localFilePathFromUrl(const QString &urlOrPath) const
+{
+    QUrl url(urlOrPath);
+    if (url.isLocalFile())
+        return url.toLocalFile();
     if (urlOrPath.startsWith("file://"))
         return QUrl(urlOrPath).toLocalFile();
     return urlOrPath;
