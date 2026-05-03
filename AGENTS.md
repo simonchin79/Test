@@ -1,3 +1,10 @@
-// OLD — always appends to the end
-beginInsertRows(m_results.size(), m_results.size());
-m_results.append(result);
+Button {
+    text: batchProgress.running ? "Classifying..." : "Classify All"
+    enabled: batchDirText.text !== "" && !batchProgress.running
+    onClicked: {
+        backend.clearBatchResults()
+        sortColumn = -1
+        sortAscending = true
+        backend.classifyDirectory(batchDirText.text);
+    }
+}
