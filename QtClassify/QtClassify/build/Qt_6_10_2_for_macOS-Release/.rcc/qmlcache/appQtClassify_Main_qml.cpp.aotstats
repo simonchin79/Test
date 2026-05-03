@@ -1778,7 +1778,7 @@
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 744,
+                            "line": 745,
                             "message": "Cannot access value for name selectedFolder"
                         },
                         {
@@ -1786,7 +1786,7 @@
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "target",
-                            "line": 761,
+                            "line": 762,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1794,7 +1794,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyStarted",
-                            "line": 762,
+                            "line": 763,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1802,7 +1802,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyProgress",
-                            "line": 767,
+                            "line": 768,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1810,7 +1810,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyFinished",
-                            "line": 771,
+                            "line": 772,
                             "message": ""
                         }
                     ],

@@ -99,3 +99,16 @@ P150 (was misclassified as P80, now fixed):
 - Run the QtClassify app against Dataset/ to verify 100% accuracy from C++ side.
 - Consider adding drag-and-drop support to the QML UI.
 - The `classify_v2.py` experimental strategies could be cleaned up.
+
+
+### 🐛 Known Issue (2026-05-03 06:29:27 UTC)
+**2026-05-02 (batch dir picker — real fix)**: The batch directory picker was using
+  `FileDialog` with `fileMode: FileDialog.OpenFolder`.  In Qt 6, `FileDialog`
+  from `QtQuick.Dialogs` does **not** have an `OpenFolder` file mode — the valid
+  modes are `OpenFile`, `OpenFiles`, and `SaveFile`.  The `OpenFolder` enum value
+  is undefined, so the dialog silently fell back to file-selection mode.  On
+  macOS this meant the dialog was selecting whatever image file was highlighted
+  inside the directory rather than the directory itself.  **Fix**: replaced
+  `FileDialog` with `FolderDialog` (also from `QtQuick.Dialogs`, introduced in
+  Qt 6.4) for `batchDirDialog` in `Main.qml`.  Kept the `selectedFolder` →
+  `currentFolder` fallback for robustness on macOS.
