@@ -458,6 +458,8 @@ Window {
                         enabled: batchDirText.text !== "" && !batchProgress.running
                         onClicked: {
                             backend.clearBatchResults()
+                            sortColumn = -1
+                            sortAscending = true
                             backend.classifyDirectory(batchDirText.text);
                         }
 
@@ -479,7 +481,11 @@ Window {
                     Button {
                         text: "Clear"
                         enabled: backend.batchTotal > 0 && !batchProgress.running
-                        onClicked: backend.clearBatchResults()
+                        onClicked: {
+                            backend.clearBatchResults()
+                            sortColumn = -1
+                            sortAscending = true
+                        }
 
                         background: Rectangle {
                             color: parent.enabled ? "#5a5a80" : "#333350"

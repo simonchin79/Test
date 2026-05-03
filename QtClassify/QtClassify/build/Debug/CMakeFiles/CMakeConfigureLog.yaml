@@ -10380,3 +10380,421 @@ events:
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:9 (find_package)"
+    name: "OpenCV"
+    components:
+      -
+        name: "core"
+        required: true
+        found: true
+      -
+        name: "imgproc"
+        required: true
+        found: true
+      -
+        name: "imgcodecs"
+        required: true
+        found: true
+    configs:
+      -
+        filename: "OpenCV.cps"
+        kind: "cps"
+      -
+        filename: "opencv.cps"
+        kind: "cps"
+      -
+        filename: "OpenCVConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "opencv-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenCV"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/opt/homebrew/opt/opencv/OpenCV.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/opencv.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/OpenCVConfig.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/opencv-config.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/opt/homebrew/lib/cmake/opencv4/OpenCVConfig.cmake"
+      mode: "config"
+      version: "4.13.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt@6"
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/Users/simonchin79gmail.com/Qt/Tools/Ninja"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Users/simonchin79gmail.com/Qt/Tools/Ninja"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:9 (find_package)"
+    name: "OpenCV"
+    components:
+      -
+        name: "core"
+        required: true
+        found: true
+      -
+        name: "imgproc"
+        required: true
+        found: true
+      -
+        name: "imgcodecs"
+        required: true
+        found: true
+    configs:
+      -
+        filename: "OpenCV.cps"
+        kind: "cps"
+      -
+        filename: "opencv.cps"
+        kind: "cps"
+      -
+        filename: "OpenCVConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "opencv-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenCV"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/opt/homebrew/opt/opencv/OpenCV.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/opencv.cps"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/OpenCVConfig.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/opencv/opencv-config.cmake"
+        mode: "none?"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/build/Debug/CMakeFiles/pkgRedirects/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opt/qt@6/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/homebrew/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/opt/homebrew/lib/cmake/opencv4/OpenCVConfig.cmake"
+      mode: "config"
+      version: "4.13.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/opt/homebrew/opt/qt@6"
+      ENV{PATH}:
+        - "/opt/homebrew/bin"
+        - "/Users/simonchin79gmail.com/Qt/Tools/Ninja"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/Users/simonchin79gmail.com/Qt/Tools/Ninja"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_FRAMEWORK_PATH:
+        - "~/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
+        - "/Applications/Xcode.app/Contents/Developer/Library/Frameworks"
+        - "/Library/Frameworks"
+        - "/Network/Library/Frameworks"
+        - "/System/Library/Frameworks"
+...
