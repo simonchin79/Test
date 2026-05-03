@@ -125,3 +125,19 @@ P150 (was misclassified as P80, now fixed):
   `m_batchRunning`, and `stopWorkerThread()` for lifecycle management.
   Single-image `classifyCurrentImage()` remains on the main thread (fast
   enough for one image).
+
+### 🧠 Decision (2026-05-03 08:40:40 UTC)
+**2026-05-03 (batch-to-single click-through)**: Added click-to-view feature in batch
+  results `ListView`. Each batch result row now has a `MouseArea` that, on click,
+  switches `swipeView.currentIndex` to 0 (Single Image tab) and sets
+  `backend.imagePath` to the clicked image's full path. Since `setImagePath()`
+  auto-calls `classifyCurrentImage()`, the single-image preview and result card
+  populate immediately. Also fixed `TabButton.checked` bindings: both tabs now
+  bind `checked` to `swipeView.currentIndex === 0` / `=== 1` instead of
+  hardcoding `checked: true` on singleTab, so the tab highlight correctly follows
+  the active page when switching programmatically. Added a subtle blue hover
+  highlight (`#7c8aff20`) and `Qt.PointingHandCursor` to indicate rows are
+  clickable.
+
+### 🧠 Decision (2026-05-03 09:42:41 UTC)
+**2026-05-03 (batch sort fix)**: Fixed batch results column sorting not working. Root cause: (1) `addResult()` always appended to end, breaking any active sort order during batch processing when new results arrived from the worker thread. (2) QML local `sortColumn`/`sortAscending` properties were never reset on Clear/Classify All, causing visual indicator state drift. Fix: (1) `addResult()` now uses `std::lower_bound` with a shared `resultLessThan()` comparator to insert at the correct sorted position when `m_sortColumn >= 0`. Extracted comparator into anonymous-namespace helper and refactored `sortByColumn()` to use it too. (2) QML "Classify All" and "Clear" button handlers now reset `sortColumn = -1; sortAscending = true`. Build verified clean.

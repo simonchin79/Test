@@ -5,6 +5,28 @@
 #include <QUrl>
 #include <algorithm>
 
+// Anonymous namespace — file-local helpers
+namespace {
+
+// Compare two ClassificationResults according to the given column and sort order.
+// Returns true if a should come before b in the current sort.
+bool resultLessThan(const ClassificationResult &a, const ClassificationResult &b,
+                    int column, Qt::SortOrder order)
+{
+    bool less = false;
+    switch (column) {
+    case 0: less = a.filename < b.filename; break;
+    case 1: less = a.label < b.label; break;
+    case 2: less = a.brightness < b.brightness; break;
+    case 3: less = a.entropy < b.entropy; break;
+    case 4: less = a.cannyEdgeDensity < b.cannyEdgeDensity; break;
+    case 5: less = static_cast<int>(a.usedTiebreaker) < static_cast<int>(b.usedTiebreaker); break;
+    }
+    return order == Qt::AscendingOrder ? less : !less;
+}
+
+} // anonymous namespace
+
 // ============================================================================
 // ClassificationResultModel
 // ============================================================================
@@ -65,8 +87,19 @@ QHash<int, QByteArray> ClassificationResultModel::roleNames() const
 
 void ClassificationResultModel::addResult(const ClassificationResult &result)
 {
-    beginInsertRows(QModelIndex(), m_results.size(), m_results.size());
-    m_results.append(result);
+    // Determine insertion position: if a sort is active, insert at the
+    // correct sorted position; otherwise append at the end.
+    int pos = m_results.size();
+    if (m_sortColumn >= 0) {
+        auto it = std::lower_bound(m_results.begin(), m_results.end(), result,
+            [this](const ClassificationResult &a, const ClassificationResult &b) {
+                return resultLessThan(a, b, m_sortColumn, m_sortOrder);
+            });
+        pos = static_cast<int>(it - m_results.begin());
+    }
+
+    beginInsertRows(QModelIndex(), pos, pos);
+    m_results.insert(pos, result);
     endInsertRows();
 
     // Update counters
@@ -85,7 +118,34 @@ void ClassificationResultModel::clear()
     m_countP80 = 0;
     m_countP150 = 0;
     m_countErrors = 0;
+    m_sortColumn = -1;
+    m_sortOrder = Qt::AscendingOrder;
     endResetModel();
+}
+
+void ClassificationResultModel::sortByColumn(int column)
+{
+    if (column < 0 || column > 5)
+        return;
+
+    // Toggle order if same column clicked; otherwise default to ascending
+    if (column == m_sortColumn) {
+        m_sortOrder = (m_sortOrder == Qt::AscendingOrder)
+                          ? Qt::DescendingOrder
+                          : Qt::AscendingOrder;
+    } else {
+        m_sortColumn = column;
+        m_sortOrder = Qt::AscendingOrder;
+    }
+
+    beginResetModel();
+    std::sort(m_results.begin(), m_results.end(),
+              [this](const ClassificationResult &a,
+                     const ClassificationResult &b) {
+        return resultLessThan(a, b, m_sortColumn, m_sortOrder);
+    });
+    endResetModel();
+    emit sortChanged();
 }
 
 // ============================================================================
@@ -333,6 +393,11 @@ void ClassifierBackend::classifyDirectory(const QString &dirPath)
     });
 
     m_workerThread->start();
+}
+
+void ClassifierBackend::sortBatchModel(int column)
+{
+    m_batchModel->sortByColumn(column);
 }
 
 void ClassifierBackend::stopWorkerThread()

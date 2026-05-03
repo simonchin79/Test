@@ -1,0 +1,220 @@
+
+                    // Column headers (click to sort)
+                    Row {
+                        id: headerRow
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.top: parent.top
+                        anchors.leftMargin: 16
+                        anchors.rightMargin: 16
+                        anchors.topMargin: 10
+                        height: 28
+                        spacing: 0
+
+                        // ---- File header ----
+                        Item {
+                            width: parent.width * 0.40; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 0 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "File"
+                                    color: sortColumn === 0 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 0 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                hoverEnabled: true
+                                onClicked: {
+                                    if (sortColumn === 0) sortAscending = !sortAscending;
+                                    else { sortColumn = 0; sortAscending = true; }
+                                    backend.sortBatchModel(0);
+                                }
+                            }
+                        }
+
+                        // ---- Result header ----
+                        Item {
+                            width: parent.width * 0.12; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 1 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "Result"
+                                    color: sortColumn === 1 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 1 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: {
+                                    if (sortColumn === 1) sortAscending = !sortAscending;
+                                    else { sortColumn = 1; sortAscending = true; }
+                                    backend.sortBatchModel(1);
+                                }
+                            }
+                        }
+
+                        // ---- Brightness header ----
+                        Item {
+                            width: parent.width * 0.12; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 2 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "Brightness"
+                                    color: sortColumn === 2 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 2 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: {
+                                    if (sortColumn === 2) sortAscending = !sortAscending;
+                                    else { sortColumn = 2; sortAscending = true; }
+                                    backend.sortBatchModel(2);
+                                }
+                            }
+                        }
+
+                        // ---- Entropy header ----
+                        Item {
+                            width: parent.width * 0.14; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 3 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "Entropy"
+                                    color: sortColumn === 3 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 3 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: {
+                                    if (sortColumn === 3) sortAscending = !sortAscending;
+                                    else { sortColumn = 3; sortAscending = true; }
+                                    backend.sortBatchModel(3);
+                                }
+                            }
+                        }
+
+                        // ---- Canny% header ----
+                        Item {
+                            width: parent.width * 0.12; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 4 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "Canny%"
+                                    color: sortColumn === 4 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 4 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: {
+                                    if (sortColumn === 4) sortAscending = !sortAscending;
+                                    else { sortColumn = 4; sortAscending = true; }
+                                    backend.sortBatchModel(4);
+                                }
+                            }
+                        }
+
+                        // ---- Note header ----
+                        Item {
+                            width: parent.width * 0.10; height: parent.height
+                            Rectangle {
+                                anchors.fill: parent
+                                color: sortColumn === 5 ? "#7c8aff20" : "transparent"
+                                radius: 4
+                            }
+                            Row {
+                                anchors.verticalCenter: parent.verticalCenter
+                                anchors.left: parent.left
+                                spacing: 2
+                                Text {
+                                    text: "Note"
+                                    color: sortColumn === 5 ? accent : textSecondary
+                                    font.pixelSize: 11; font.bold: true
+                                }
+                                Text {
+                                    text: sortColumn === 5 ? (sortAscending ? " ▲" : " ▼") : ""
+                                    color: accent
+                                    font.pixelSize: 9
+                                }
+                            }
+                            MouseArea {
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+                                onClicked: {
+                                    if (sortColumn === 5) sortAscending = !sortAscending;
+                                    else { sortColumn = 5; sortAscending = true; }
+                                    backend.sortBatchModel(5);
+                                }
+                            }
+                        }
+                    }
+
+                    Rectangle {

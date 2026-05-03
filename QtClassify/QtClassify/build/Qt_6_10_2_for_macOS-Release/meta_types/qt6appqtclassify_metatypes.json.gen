@@ -4,8 +4,64 @@
             {
                 "className": "ClassificationResultModel",
                 "lineNumber": 15,
+                "methods": [
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "column",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 1,
+                        "lineNumber": 42,
+                        "name": "sortByColumn",
+                        "returnType": "void"
+                    }
+                ],
                 "object": true,
+                "properties": [
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 0,
+                        "lineNumber": 39,
+                        "name": "sortColumn",
+                        "notify": "sortChanged",
+                        "read": "sortColumn",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "int",
+                        "user": false
+                    },
+                    {
+                        "constant": false,
+                        "designable": true,
+                        "final": false,
+                        "index": 1,
+                        "lineNumber": 40,
+                        "name": "sortAscending",
+                        "notify": "sortChanged",
+                        "read": "sortAscending",
+                        "required": false,
+                        "scriptable": true,
+                        "stored": true,
+                        "type": "bool",
+                        "user": false
+                    }
+                ],
                 "qualifiedClassName": "ClassificationResultModel",
+                "signals": [
+                    {
+                        "access": "public",
+                        "index": 0,
+                        "lineNumber": 56,
+                        "name": "sortChanged",
+                        "returnType": "void"
+                    }
+                ],
                 "superClasses": [
                     {
                         "access": "public",
@@ -15,7 +71,7 @@
             },
             {
                 "className": "ClassifierWorker",
-                "lineNumber": 58,
+                "lineNumber": 71,
                 "object": true,
                 "qualifiedClassName": "ClassifierWorker",
                 "signals": [
@@ -28,7 +84,7 @@
                             }
                         ],
                         "index": 0,
-                        "lineNumber": 72,
+                        "lineNumber": 85,
                         "name": "started",
                         "returnType": "void"
                     },
@@ -49,7 +105,7 @@
                             }
                         ],
                         "index": 1,
-                        "lineNumber": 73,
+                        "lineNumber": 86,
                         "name": "progress",
                         "returnType": "void"
                     },
@@ -62,14 +118,14 @@
                             }
                         ],
                         "index": 2,
-                        "lineNumber": 74,
+                        "lineNumber": 87,
                         "name": "resultReady",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
-                        "lineNumber": 75,
+                        "lineNumber": 88,
                         "name": "finished",
                         "returnType": "void"
                     },
@@ -82,7 +138,7 @@
                             }
                         ],
                         "index": 4,
-                        "lineNumber": 76,
+                        "lineNumber": 89,
                         "name": "errorOccurred",
                         "returnType": "void"
                     }
@@ -91,7 +147,7 @@
                     {
                         "access": "public",
                         "index": 5,
-                        "lineNumber": 69,
+                        "lineNumber": 82,
                         "name": "process",
                         "returnType": "void"
                     }
@@ -105,7 +161,7 @@
             },
             {
                 "className": "ClassifierBackend",
-                "lineNumber": 90,
+                "lineNumber": 103,
                 "object": true,
                 "properties": [
                     {
@@ -113,7 +169,7 @@
                         "designable": true,
                         "final": false,
                         "index": 0,
-                        "lineNumber": 95,
+                        "lineNumber": 108,
                         "name": "imagePath",
                         "notify": "imagePathChanged",
                         "read": "imagePath",
@@ -129,7 +185,7 @@
                         "designable": true,
                         "final": false,
                         "index": 1,
-                        "lineNumber": 97,
+                        "lineNumber": 110,
                         "name": "classificationLabel",
                         "notify": "classificationChanged",
                         "read": "classificationLabel",
@@ -144,7 +200,7 @@
                         "designable": true,
                         "final": false,
                         "index": 2,
-                        "lineNumber": 99,
+                        "lineNumber": 112,
                         "name": "brightness",
                         "notify": "classificationChanged",
                         "read": "brightness",
@@ -159,7 +215,7 @@
                         "designable": true,
                         "final": false,
                         "index": 3,
-                        "lineNumber": 101,
+                        "lineNumber": 114,
                         "name": "entropy",
                         "notify": "classificationChanged",
                         "read": "entropy",
@@ -174,7 +230,7 @@
                         "designable": true,
                         "final": false,
                         "index": 4,
-                        "lineNumber": 103,
+                        "lineNumber": 116,
                         "name": "cannyEdgeDensity",
                         "notify": "classificationChanged",
                         "read": "cannyEdgeDensity",
@@ -189,7 +245,7 @@
                         "designable": true,
                         "final": false,
                         "index": 5,
-                        "lineNumber": 105,
+                        "lineNumber": 118,
                         "name": "usedTiebreaker",
                         "notify": "classificationChanged",
                         "read": "usedTiebreaker",
@@ -204,7 +260,7 @@
                         "designable": true,
                         "final": false,
                         "index": 6,
-                        "lineNumber": 107,
+                        "lineNumber": 120,
                         "name": "lastError",
                         "notify": "lastErrorChanged",
                         "read": "lastError",
@@ -219,7 +275,7 @@
                         "designable": true,
                         "final": false,
                         "index": 7,
-                        "lineNumber": 111,
+                        "lineNumber": 124,
                         "name": "roiFraction",
                         "notify": "roiFractionChanged",
                         "read": "roiFraction",
@@ -235,7 +291,7 @@
                         "designable": true,
                         "final": false,
                         "index": 8,
-                        "lineNumber": 115,
+                        "lineNumber": 128,
                         "name": "batchModel",
                         "read": "batchModel",
                         "required": false,
@@ -249,7 +305,7 @@
                         "designable": true,
                         "final": false,
                         "index": 9,
-                        "lineNumber": 118,
+                        "lineNumber": 131,
                         "name": "batchCountP50",
                         "notify": "batchModelChanged",
                         "read": "batchCountP50",
@@ -264,7 +320,7 @@
                         "designable": true,
                         "final": false,
                         "index": 10,
-                        "lineNumber": 119,
+                        "lineNumber": 132,
                         "name": "batchCountP80",
                         "notify": "batchModelChanged",
                         "read": "batchCountP80",
@@ -279,7 +335,7 @@
                         "designable": true,
                         "final": false,
                         "index": 11,
-                        "lineNumber": 120,
+                        "lineNumber": 133,
                         "name": "batchCountP150",
                         "notify": "batchModelChanged",
                         "read": "batchCountP150",
@@ -294,7 +350,7 @@
                         "designable": true,
                         "final": false,
                         "index": 12,
-                        "lineNumber": 121,
+                        "lineNumber": 134,
                         "name": "batchCountErrors",
                         "notify": "batchModelChanged",
                         "read": "batchCountErrors",
@@ -309,7 +365,7 @@
                         "designable": true,
                         "final": false,
                         "index": 13,
-                        "lineNumber": 122,
+                        "lineNumber": 135,
                         "name": "batchTotal",
                         "notify": "batchModelChanged",
                         "read": "batchTotal",
@@ -325,35 +381,35 @@
                     {
                         "access": "public",
                         "index": 0,
-                        "lineNumber": 156,
+                        "lineNumber": 171,
                         "name": "imagePathChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 1,
-                        "lineNumber": 157,
+                        "lineNumber": 172,
                         "name": "classificationChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 2,
-                        "lineNumber": 158,
+                        "lineNumber": 173,
                         "name": "lastErrorChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 3,
-                        "lineNumber": 159,
+                        "lineNumber": 174,
                         "name": "roiFractionChanged",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 4,
-                        "lineNumber": 160,
+                        "lineNumber": 175,
                         "name": "batchModelChanged",
                         "returnType": "void"
                     },
@@ -366,7 +422,7 @@
                             }
                         ],
                         "index": 5,
-                        "lineNumber": 162,
+                        "lineNumber": 177,
                         "name": "batchClassifyStarted",
                         "returnType": "void"
                     },
@@ -387,14 +443,14 @@
                             }
                         ],
                         "index": 6,
-                        "lineNumber": 163,
+                        "lineNumber": 178,
                         "name": "batchClassifyProgress",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 7,
-                        "lineNumber": 165,
+                        "lineNumber": 180,
                         "name": "batchClassifyFinished",
                         "returnType": "void"
                     }
@@ -403,7 +459,7 @@
                     {
                         "access": "public",
                         "index": 8,
-                        "lineNumber": 151,
+                        "lineNumber": 164,
                         "name": "classifyCurrentImage",
                         "returnType": "void"
                     },
@@ -416,15 +472,28 @@
                             }
                         ],
                         "index": 9,
-                        "lineNumber": 152,
+                        "lineNumber": 165,
                         "name": "classifyDirectory",
                         "returnType": "void"
                     },
                     {
                         "access": "public",
                         "index": 10,
-                        "lineNumber": 153,
+                        "lineNumber": 166,
                         "name": "clearBatchResults",
+                        "returnType": "void"
+                    },
+                    {
+                        "access": "public",
+                        "arguments": [
+                            {
+                                "name": "column",
+                                "type": "int"
+                            }
+                        ],
+                        "index": 11,
+                        "lineNumber": 168,
+                        "name": "sortBatchModel",
                         "returnType": "void"
                     }
                 ],

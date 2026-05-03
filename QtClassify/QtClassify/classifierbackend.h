@@ -35,6 +35,14 @@ public:
                   int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    // Sort-column state as Q_PROPERTY so QML binding expressions auto-update
+    Q_PROPERTY(int sortColumn READ sortColumn NOTIFY sortChanged)
+    Q_PROPERTY(bool sortAscending READ sortAscending NOTIFY sortChanged)
+
+    Q_INVOKABLE void sortByColumn(int column);
+    int sortColumn() const { return m_sortColumn; }
+    bool sortAscending() const { return m_sortOrder == Qt::AscendingOrder; }
+
     void addResult(const ClassificationResult &result);
     void clear();
 
@@ -44,12 +52,17 @@ public:
     int countErrors() const { return m_countErrors; }
     int totalCount() const { return m_results.size(); }
 
+signals:
+    void sortChanged();
+
 private:
     QList<ClassificationResult> m_results;
     int m_countP50   = 0;
     int m_countP80   = 0;
     int m_countP150  = 0;
     int m_countErrors = 0;
+    int m_sortColumn = -1;        // -1 = natural (insertion) order
+    Qt::SortOrder m_sortOrder = Qt::AscendingOrder;
 };
 
 // ============================================================================
@@ -151,6 +164,8 @@ public slots:
     void classifyCurrentImage();
     void classifyDirectory(const QString &dirPath);
     void clearBatchResults();
+
+    Q_INVOKABLE void sortBatchModel(int column);
 
 signals:
     void imagePathChanged();

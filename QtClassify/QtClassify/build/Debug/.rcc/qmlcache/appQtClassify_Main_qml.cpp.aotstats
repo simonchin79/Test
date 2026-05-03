@@ -151,6 +151,14 @@
                         },
                         {
                             "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 118,
+                            "message": "Could not find property \"checked\"."
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
@@ -207,10 +215,18 @@
                         },
                         {
                             "codegenResult": 2,
+                            "column": 26,
+                            "durationMicroseconds": 0,
+                            "functionName": "checked",
+                            "line": 140,
+                            "message": "Could not find property \"checked\"."
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 140,
+                            "line": 141,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -218,7 +234,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 143,
+                            "line": 144,
                             "message": "Cannot access value for name batchTab"
                         },
                         {
@@ -226,7 +242,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 147,
+                            "line": 148,
                             "message": "Cannot access value for name batchTab"
                         },
                         {
@@ -234,7 +250,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 148,
+                            "line": 149,
                             "message": "Cannot access value for name batchTab"
                         },
                         {
@@ -242,7 +258,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 151,
+                            "line": 152,
                             "message": ""
                         },
                         {
@@ -250,7 +266,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 152,
+                            "line": 153,
                             "message": ""
                         },
                         {
@@ -258,7 +274,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "bold",
-                            "line": 150,
+                            "line": 151,
                             "message": "Cannot access value for name batchTab"
                         },
                         {
@@ -266,7 +282,7 @@
                             "column": 23,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 161,
+                            "line": 162,
                             "message": "Could not find property \"left\"."
                         },
                         {
@@ -274,7 +290,7 @@
                             "column": 24,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 162,
+                            "line": 163,
                             "message": "Could not find property \"right\"."
                         },
                         {
@@ -282,7 +298,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 163,
+                            "line": 164,
                             "message": "Could not find property \"top\"."
                         },
                         {
@@ -290,7 +306,7 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "bottom",
-                            "line": 164,
+                            "line": 165,
                             "message": "Could not find property \"bottom\"."
                         },
                         {
@@ -298,7 +314,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 174,
+                            "line": 175,
                             "message": ""
                         },
                         {
@@ -306,7 +322,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 184,
+                            "line": 185,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -314,7 +330,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 187,
+                            "line": 188,
                             "message": "Cannot access value for name accent"
                         },
                         {
@@ -322,7 +338,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 191,
+                            "line": 192,
                             "message": "Cannot load property text from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -330,7 +346,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 195,
+                            "line": 196,
                             "message": ""
                         },
                         {
@@ -338,7 +354,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 196,
+                            "line": 197,
                             "message": ""
                         },
                         {
@@ -346,7 +362,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 203,
+                            "line": 204,
                             "message": "Cannot access value for name bgInput"
                         },
                         {
@@ -354,7 +370,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 211,
+                            "line": 212,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -362,7 +378,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 212,
+                            "line": 213,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -370,7 +386,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 214,
+                            "line": 215,
                             "message": ""
                         },
                         {
@@ -378,7 +394,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 215,
+                            "line": 216,
                             "message": ""
                         },
                         {
@@ -386,7 +402,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 208,
+                            "line": 209,
                             "message": ""
                         },
                         {
@@ -394,7 +410,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 221,
+                            "line": 222,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -402,7 +418,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 222,
+                            "line": 223,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -410,7 +426,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 225,
+                            "line": 226,
                             "message": ""
                         },
                         {
@@ -418,7 +434,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 229,
+                            "line": 230,
                             "message": "Cannot load property text from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -426,7 +442,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 230,
+                            "line": 231,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -434,7 +450,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 232,
+                            "line": 233,
                             "message": ""
                         },
                         {
@@ -442,7 +458,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 233,
+                            "line": 234,
                             "message": ""
                         },
                         {
@@ -450,7 +466,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 249,
+                            "line": 250,
                             "message": "Cannot access value for name bgCard"
                         },
                         {
@@ -458,7 +474,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "fillMode",
-                            "line": 258,
+                            "line": 259,
                             "message": ""
                         },
                         {
@@ -466,7 +482,7 @@
                             "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "source",
-                            "line": 259,
+                            "line": 260,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -474,7 +490,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 260,
+                            "line": 261,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -482,7 +498,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 256,
+                            "line": 257,
                             "message": ""
                         },
                         {
@@ -490,7 +506,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 264,
+                            "line": 265,
                             "message": "Cannot retrieve a non-object type by ID: roiSpin"
                         },
                         {
@@ -498,7 +514,7 @@
                             "column": 41,
                             "durationMicroseconds": 0,
                             "functionName": "height",
-                            "line": 265,
+                            "line": 266,
                             "message": "Cannot retrieve a non-object type by ID: roiSpin"
                         },
                         {
@@ -506,7 +522,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 269,
+                            "line": 270,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -514,7 +530,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 263,
+                            "line": 264,
                             "message": ""
                         },
                         {
@@ -522,7 +538,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 276,
+                            "line": 277,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -530,7 +546,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 278,
+                            "line": 279,
                             "message": ""
                         },
                         {
@@ -538,7 +554,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 279,
+                            "line": 280,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -546,7 +562,7 @@
                             "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 274,
+                            "line": 275,
                             "message": ""
                         },
                         {
@@ -554,7 +570,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 287,
+                            "line": 288,
                             "message": "Cannot access value for name bgCard"
                         },
                         {
@@ -562,7 +578,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 292,
+                            "line": 293,
                             "message": ""
                         },
                         {
@@ -570,7 +586,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 298,
+                            "line": 299,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -578,7 +594,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 301,
+                            "line": 302,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -586,7 +602,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "implicitWidth",
-                            "line": 307,
+                            "line": 308,
                             "message": ""
                         },
                         {
@@ -594,7 +610,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 310,
+                            "line": 311,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -602,7 +618,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 312,
+                            "line": 313,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -610,7 +626,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 306,
+                            "line": 307,
                             "message": ""
                         },
                         {
@@ -618,7 +634,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 317,
+                            "line": 318,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -626,7 +642,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 318,
+                            "line": 319,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -634,7 +650,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 321,
+                            "line": 322,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -642,7 +658,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 316,
+                            "line": 317,
                             "message": ""
                         },
                         {
@@ -650,7 +666,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "implicitWidth",
-                            "line": 327,
+                            "line": 328,
                             "message": ""
                         },
                         {
@@ -658,7 +674,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 331,
+                            "line": 332,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -666,7 +682,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 326,
+                            "line": 327,
                             "message": ""
                         },
                         {
@@ -674,7 +690,7 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 336,
+                            "line": 337,
                             "message": "Cannot access value for name p150Color"
                         },
                         {
@@ -682,7 +698,7 @@
                             "column": 55,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 334,
+                            "line": 335,
                             "message": ""
                         },
                         {
@@ -690,7 +706,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 346,
+                            "line": 347,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -698,23 +714,23 @@
                             "column": 72,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 348,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
                             "line": 349,
-                            "message": "Cannot access value for name backend"
+                            "message": "Cannot access value for name textSecondary"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 47,
+                            "column": 46,
                             "durationMicroseconds": 0,
-                            "functionName": "color",
+                            "functionName": "text",
                             "line": 350,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 351,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -722,23 +738,23 @@
                             "column": 72,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 352,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
                             "line": 353,
-                            "message": "Cannot access value for name backend"
+                            "message": "Cannot access value for name textSecondary"
                         },
                         {
                             "codegenResult": 2,
-                            "column": 47,
+                            "column": 46,
                             "durationMicroseconds": 0,
-                            "functionName": "color",
+                            "functionName": "text",
                             "line": 354,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 355,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -746,31 +762,7 @@
                             "column": 72,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 356,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 46,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
                             "line": 357,
-                            "message": "Cannot access value for name backend"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 47,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 358,
-                            "message": "Cannot access value for name textPrimary"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 72,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 360,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -778,7 +770,7 @@
                             "column": 46,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 361,
+                            "line": 358,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -786,7 +778,31 @@
                             "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "color",
+                            "line": 359,
+                            "message": "Cannot access value for name textPrimary"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 72,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 361,
+                            "message": "Cannot access value for name textSecondary"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
                             "line": 362,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 363,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -794,7 +810,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 367,
+                            "line": 368,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -802,7 +818,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 376,
+                            "line": 377,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -810,7 +826,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "wrapMode",
-                            "line": 379,
+                            "line": 380,
                             "message": ""
                         },
                         {
@@ -818,7 +834,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 389,
+                            "line": 390,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -826,7 +842,7 @@
                             "column": 54,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 391,
+                            "line": 392,
                             "message": ""
                         },
                         {
@@ -834,7 +850,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 392,
+                            "line": 393,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -842,7 +858,7 @@
                             "column": 51,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 387,
+                            "line": 388,
                             "message": ""
                         },
                         {
@@ -850,7 +866,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 405,
+                            "line": 406,
                             "message": ""
                         },
                         {
@@ -858,7 +874,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 415,
+                            "line": 416,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -866,7 +882,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 418,
+                            "line": 419,
                             "message": "Cannot access value for name accent"
                         },
                         {
@@ -874,7 +890,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 422,
+                            "line": 423,
                             "message": "Cannot load property text from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -882,7 +898,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 426,
+                            "line": 427,
                             "message": ""
                         },
                         {
@@ -890,7 +906,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 427,
+                            "line": 428,
                             "message": ""
                         },
                         {
@@ -898,7 +914,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 434,
+                            "line": 435,
                             "message": "Cannot access value for name bgInput"
                         },
                         {
@@ -906,7 +922,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 442,
+                            "line": 443,
                             "message": ""
                         },
                         {
@@ -914,7 +930,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 443,
+                            "line": 444,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -922,7 +938,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 445,
+                            "line": 446,
                             "message": ""
                         },
                         {
@@ -930,7 +946,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "elide",
-                            "line": 446,
+                            "line": 447,
                             "message": ""
                         },
                         {
@@ -938,7 +954,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 439,
+                            "line": 440,
                             "message": ""
                         },
                         {
@@ -946,7 +962,7 @@
                             "column": 31,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 456,
+                            "line": 457,
                             "message": "Could not find property \"text\"."
                         },
                         {
@@ -954,7 +970,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 457,
+                            "line": 458,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -962,7 +978,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 458,
+                            "line": 459,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -970,7 +986,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 464,
+                            "line": 467,
                             "message": ""
                         },
                         {
@@ -978,7 +994,7 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "opacity",
-                            "line": 465,
+                            "line": 468,
                             "message": ""
                         },
                         {
@@ -986,7 +1002,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 469,
+                            "line": 472,
                             "message": "Cannot load property text from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -994,7 +1010,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 470,
+                            "line": 473,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -1002,7 +1018,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 473,
+                            "line": 476,
                             "message": ""
                         },
                         {
@@ -1010,7 +1026,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 474,
+                            "line": 477,
                             "message": ""
                         },
                         {
@@ -1018,7 +1034,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "enabled",
-                            "line": 480,
+                            "line": 483,
                             "message": "Could not find property \"enabled\"."
                         },
                         {
@@ -1026,7 +1042,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "onClicked",
-                            "line": 481,
+                            "line": 484,
                             "message": "Could not find signal \"clicked\"."
                         },
                         {
@@ -1034,7 +1050,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 484,
+                            "line": 491,
                             "message": ""
                         },
                         {
@@ -1042,7 +1058,7 @@
                             "column": 35,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 488,
+                            "line": 495,
                             "message": "Cannot load property text from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -1050,7 +1066,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 489,
+                            "line": 496,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -1058,7 +1074,7 @@
                             "column": 50,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 491,
+                            "line": 498,
                             "message": ""
                         },
                         {
@@ -1066,7 +1082,7 @@
                             "column": 48,
                             "durationMicroseconds": 0,
                             "functionName": "verticalAlignment",
-                            "line": 492,
+                            "line": 499,
                             "message": ""
                         },
                         {
@@ -1074,7 +1090,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 501,
+                            "line": 508,
                             "message": "Cannot access value for name bgInput"
                         },
                         {
@@ -1082,7 +1098,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 503,
+                            "line": 510,
                             "message": ""
                         },
                         {
@@ -1090,7 +1106,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 506,
+                            "line": 513,
                             "message": ""
                         },
                         {
@@ -1098,7 +1114,7 @@
                             "column": 33,
                             "durationMicroseconds": 0,
                             "functionName": "height",
-                            "line": 507,
+                            "line": 514,
                             "message": ""
                         },
                         {
@@ -1106,7 +1122,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 508,
+                            "line": 515,
                             "message": "Cannot access value for name successColor"
                         },
                         {
@@ -1114,7 +1130,7 @@
                             "column": 27,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 514,
+                            "line": 521,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1122,7 +1138,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 519,
+                            "line": 526,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -1130,7 +1146,7 @@
                             "column": 30,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 521,
+                            "line": 528,
                             "message": ""
                         },
                         {
@@ -1138,7 +1154,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 528,
+                            "line": 539,
                             "message": "Cannot access value for name bgCard"
                         },
                         {
@@ -1146,7 +1162,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 535,
+                            "line": 546,
                             "message": ""
                         },
                         {
@@ -1154,7 +1170,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 536,
+                            "line": 547,
                             "message": ""
                         },
                         {
@@ -1162,192 +1178,128 @@
                             "column": 38,
                             "durationMicroseconds": 0,
                             "functionName": "top",
-                            "line": 537,
+                            "line": 548,
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 544,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
                             "codegenResult": 0,
-                            "column": 39,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 546,
+                            "line": 557,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 67,
+                            "column": 65,
                             "durationMicroseconds": 0,
-                            "functionName": "elide",
-                            "line": 546,
+                            "functionName": "height",
+                            "line": 557,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 67,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 547,
-                            "message": "Cannot access value for name textSecondary"
+                            "line": 560,
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 39,
+                            "column": 47,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 549,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 550,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 552,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 553,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 555,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 556,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 558,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 67,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
+                            "functionName": "fill",
                             "line": 559,
-                            "message": "Cannot access value for name textSecondary"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 39,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 561,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 39,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 564,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
                             "durationMicroseconds": 0,
                             "functionName": "left",
                             "line": 565,
                             "message": ""
                         },
                         {
-                            "codegenResult": 0,
-                            "column": 40,
+                            "codegenResult": 2,
+                            "column": 44,
                             "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 566,
-                            "message": ""
+                            "functionName": "color",
+                            "line": 569,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 573,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 574,
+                            "message": "Cannot access value for name accent"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 38,
+                            "column": 46,
                             "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 567,
+                            "functionName": "cursorShape",
+                            "line": 580,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 32,
+                            "column": 44,
                             "durationMicroseconds": 0,
-                            "functionName": "model",
-                            "line": 585,
-                            "message": "Cannot access value for name backend"
+                            "functionName": "onClicked",
+                            "line": 582,
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 39,
+                            "column": 47,
                             "durationMicroseconds": 0,
-                            "functionName": "left",
-                            "line": 575,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 40,
-                            "durationMicroseconds": 0,
-                            "functionName": "right",
-                            "line": 576,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 38,
-                            "durationMicroseconds": 0,
-                            "functionName": "top",
-                            "line": 577,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 41,
-                            "durationMicroseconds": 0,
-                            "functionName": "bottom",
+                            "functionName": "fill",
                             "line": 579,
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
+                            "codegenResult": 0,
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "width",
-                            "line": 588,
-                            "message": "Cannot access value for name batchList"
+                            "line": 592,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 65,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 592,
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 36,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 590,
-                            "message": "Cannot access value for name index"
+                            "line": 595,
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 0,
@@ -1358,44 +1310,28 @@
                             "message": ""
                         },
                         {
-                            "codegenResult": 2,
-                            "column": 43,
+                            "codegenResult": 0,
+                            "column": 57,
                             "durationMicroseconds": 0,
-                            "functionName": "text",
+                            "functionName": "verticalCenter",
+                            "line": 599,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
                             "line": 600,
-                            "message": "Cannot access value for name filename"
+                            "message": ""
                         },
                         {
                             "codegenResult": 2,
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 601,
-                            "message": "Cannot access value for name isError"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 603,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "elide",
                             "line": 604,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 56,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 605,
-                            "message": ""
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 2,
@@ -1403,7 +1339,7 @@
                             "durationMicroseconds": 0,
                             "functionName": "text",
                             "line": 608,
-                            "message": "Cannot access value for name label"
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 2,
@@ -1411,75 +1347,35 @@
                             "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 609,
-                            "message": "Cannot access value for name mainWindow"
+                            "message": "Cannot access value for name accent"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 44,
+                            "column": 46,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 612,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 56,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 613,
+                            "functionName": "cursorShape",
+                            "line": 615,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 43,
+                            "column": 44,
                             "durationMicroseconds": 0,
-                            "functionName": "text",
+                            "functionName": "onClicked",
                             "line": 616,
-                            "message": "Cannot access value for name brightness"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 617,
-                            "message": "Cannot access value for name textPrimary"
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 44,
+                            "column": 47,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 619,
+                            "functionName": "fill",
+                            "line": 614,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 56,
-                            "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 620,
-                            "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 623,
-                            "message": "Cannot access value for name entropy"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
-                            "durationMicroseconds": 0,
-                            "functionName": "color",
-                            "line": 624,
-                            "message": "Cannot access value for name textPrimary"
-                        },
-                        {
-                            "codegenResult": 0,
-                            "column": 44,
+                            "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "width",
                             "line": 626,
@@ -1487,51 +1383,43 @@
                         },
                         {
                             "codegenResult": 0,
-                            "column": 56,
+                            "column": 65,
                             "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 627,
+                            "functionName": "height",
+                            "line": 626,
                             "message": ""
                         },
                         {
                             "codegenResult": 2,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 630,
-                            "message": "Cannot access value for name canny"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 44,
+                            "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 631,
-                            "message": "Cannot access value for name textPrimary"
+                            "line": 629,
+                            "message": "Cannot access value for name sortColumn"
                         },
                         {
                             "codegenResult": 0,
-                            "column": 44,
+                            "column": 47,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
+                            "functionName": "fill",
+                            "line": 628,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
                             "line": 633,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 56,
+                            "column": 47,
                             "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
+                            "functionName": "left",
                             "line": 634,
                             "message": ""
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 43,
-                            "durationMicroseconds": 0,
-                            "functionName": "text",
-                            "line": 637,
-                            "message": "Cannot access value for name usedTiebreaker"
                         },
                         {
                             "codegenResult": 2,
@@ -1539,22 +1427,334 @@
                             "durationMicroseconds": 0,
                             "functionName": "color",
                             "line": 638,
-                            "message": "Cannot access value for name p150Color"
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 642,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 643,
+                            "message": "Cannot access value for name accent"
                         },
                         {
                             "codegenResult": 0,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "cursorShape",
+                            "line": 649,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
                             "column": 44,
                             "durationMicroseconds": 0,
-                            "functionName": "width",
-                            "line": 640,
+                            "functionName": "onClicked",
+                            "line": 650,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 648,
                             "message": ""
                         },
                         {
                             "codegenResult": 0,
-                            "column": 56,
+                            "column": 36,
                             "durationMicroseconds": 0,
-                            "functionName": "verticalAlignment",
-                            "line": 641,
+                            "functionName": "width",
+                            "line": 660,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 65,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 660,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 663,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 662,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 667,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 668,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 672,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 676,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 677,
+                            "message": "Cannot access value for name accent"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "cursorShape",
+                            "line": 683,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 684,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 682,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 694,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 65,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 694,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 697,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 696,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 701,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 702,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 706,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 710,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 711,
+                            "message": "Cannot access value for name accent"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "cursorShape",
+                            "line": 717,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 718,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 716,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 728,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 65,
+                            "durationMicroseconds": 0,
+                            "functionName": "height",
+                            "line": 728,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 731,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 730,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 57,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalCenter",
+                            "line": 735,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 736,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 740,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 744,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 745,
+                            "message": "Cannot access value for name accent"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "cursorShape",
+                            "line": 751,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 752,
+                            "message": "Cannot access value for name sortColumn"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 750,
                             "message": ""
                         },
                         {
@@ -1562,7 +1762,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 650,
+                            "line": 762,
                             "message": ""
                         },
                         {
@@ -1570,7 +1770,47 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 651,
+                            "line": 763,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 764,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 32,
+                            "durationMicroseconds": 0,
+                            "functionName": "model",
+                            "line": 782,
+                            "message": "Cannot access value for name backend"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 772,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 773,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 38,
+                            "durationMicroseconds": 0,
+                            "functionName": "top",
+                            "line": 774,
                             "message": ""
                         },
                         {
@@ -1578,7 +1818,295 @@
                             "column": 41,
                             "durationMicroseconds": 0,
                             "functionName": "bottom",
-                            "line": 652,
+                            "line": 776,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 786,
+                            "message": "Cannot access value for name batchList"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 36,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 788,
+                            "message": "Cannot access value for name index"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 42,
+                            "durationMicroseconds": 0,
+                            "functionName": "visible",
+                            "line": 796,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 793,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 46,
+                            "durationMicroseconds": 0,
+                            "functionName": "cursorShape",
+                            "line": 803,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "onClicked",
+                            "line": 804,
+                            "message": "Cannot access value for name swipeView"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 801,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 47,
+                            "durationMicroseconds": 0,
+                            "functionName": "fill",
+                            "line": 811,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 817,
+                            "message": "Cannot access value for name filename"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 818,
+                            "message": "Cannot access value for name isError"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 820,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "elide",
+                            "line": 821,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 822,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 825,
+                            "message": "Cannot access value for name label"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 826,
+                            "message": "Cannot access value for name mainWindow"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 829,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 830,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 833,
+                            "message": "Cannot access value for name brightness"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 834,
+                            "message": "Cannot access value for name textPrimary"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 836,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 837,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 840,
+                            "message": "Cannot access value for name entropy"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 841,
+                            "message": "Cannot access value for name textPrimary"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 843,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 844,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 847,
+                            "message": "Cannot access value for name canny"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 848,
+                            "message": "Cannot access value for name textPrimary"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 850,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 851,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 43,
+                            "durationMicroseconds": 0,
+                            "functionName": "text",
+                            "line": 854,
+                            "message": "Cannot access value for name usedTiebreaker"
+                        },
+                        {
+                            "codegenResult": 2,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "color",
+                            "line": 855,
+                            "message": "Cannot access value for name p150Color"
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 44,
+                            "durationMicroseconds": 0,
+                            "functionName": "width",
+                            "line": 857,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 56,
+                            "durationMicroseconds": 0,
+                            "functionName": "verticalAlignment",
+                            "line": 858,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 39,
+                            "durationMicroseconds": 0,
+                            "functionName": "left",
+                            "line": 867,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 40,
+                            "durationMicroseconds": 0,
+                            "functionName": "right",
+                            "line": 868,
+                            "message": ""
+                        },
+                        {
+                            "codegenResult": 0,
+                            "column": 41,
+                            "durationMicroseconds": 0,
+                            "functionName": "bottom",
+                            "line": 869,
                             "message": ""
                         },
                         {
@@ -1586,7 +2114,7 @@
                             "column": 37,
                             "durationMicroseconds": 0,
                             "functionName": "height",
-                            "line": 662,
+                            "line": 879,
                             "message": ""
                         },
                         {
@@ -1594,7 +2122,7 @@
                             "column": 36,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 663,
+                            "line": 880,
                             "message": "Cannot load property color from (component in /Users/simonchin79gmail.com/Data/Projects/Test/QtClassify/QtClassify/Main.qml)::parent with type QQuickItem."
                         },
                         {
@@ -1602,7 +2130,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "left",
-                            "line": 659,
+                            "line": 876,
                             "message": ""
                         },
                         {
@@ -1610,7 +2138,7 @@
                             "column": 44,
                             "durationMicroseconds": 0,
                             "functionName": "right",
-                            "line": 660,
+                            "line": 877,
                             "message": ""
                         },
                         {
@@ -1618,7 +2146,7 @@
                             "column": 45,
                             "durationMicroseconds": 0,
                             "functionName": "bottom",
-                            "line": 661,
+                            "line": 878,
                             "message": ""
                         },
                         {
@@ -1626,7 +2154,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "fill",
-                            "line": 667,
+                            "line": 884,
                             "message": ""
                         },
                         {
@@ -1634,7 +2162,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 673,
+                            "line": 890,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1642,7 +2170,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 674,
+                            "line": 891,
                             "message": "Cannot access value for name textPrimary"
                         },
                         {
@@ -1650,7 +2178,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 679,
+                            "line": 896,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1658,7 +2186,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 680,
+                            "line": 897,
                             "message": "Cannot access value for name p50Color"
                         },
                         {
@@ -1666,7 +2194,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 685,
+                            "line": 902,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1674,7 +2202,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 686,
+                            "line": 903,
                             "message": "Cannot access value for name p80Color"
                         },
                         {
@@ -1682,7 +2210,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 691,
+                            "line": 908,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1690,7 +2218,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 692,
+                            "line": 909,
                             "message": "Cannot access value for name p150Color"
                         },
                         {
@@ -1698,7 +2226,7 @@
                             "column": 39,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 697,
+                            "line": 914,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1706,7 +2234,7 @@
                             "column": 40,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 698,
+                            "line": 915,
                             "message": "Cannot access value for name errorColor"
                         },
                         {
@@ -1714,7 +2242,7 @@
                             "column": 42,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 701,
+                            "line": 918,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1722,7 +2250,7 @@
                             "column": 32,
                             "durationMicroseconds": 0,
                             "functionName": "color",
-                            "line": 710,
+                            "line": 927,
                             "message": "Cannot access value for name textSecondary"
                         },
                         {
@@ -1730,7 +2258,7 @@
                             "column": 46,
                             "durationMicroseconds": 0,
                             "functionName": "horizontalAlignment",
-                            "line": 712,
+                            "line": 929,
                             "message": ""
                         },
                         {
@@ -1738,7 +2266,7 @@
                             "column": 34,
                             "durationMicroseconds": 0,
                             "functionName": "visible",
-                            "line": 713,
+                            "line": 930,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1746,7 +2274,7 @@
                             "column": 43,
                             "durationMicroseconds": 0,
                             "functionName": "centerIn",
-                            "line": 708,
+                            "line": 925,
                             "message": ""
                         },
                         {
@@ -1754,7 +2282,7 @@
                             "column": 22,
                             "durationMicroseconds": 0,
                             "functionName": "nameFilters",
-                            "line": 732,
+                            "line": 949,
                             "message": ""
                         },
                         {
@@ -1762,31 +2290,23 @@
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 733,
+                            "line": 950,
                             "message": "Cannot access value for name backend"
-                        },
-                        {
-                            "codegenResult": 2,
-                            "column": 19,
-                            "durationMicroseconds": 0,
-                            "functionName": "fileMode",
-                            "line": 743,
-                            "message": "Cannot load property OpenFolder from const QMetaObject."
                         },
                         {
                             "codegenResult": 2,
                             "column": 21,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 744,
-                            "message": "Cannot access value for name selectedFolder"
+                            "line": 961,
+                            "message": "Cannot generate efficient code for call to untyped JavaScript function"
                         },
                         {
                             "codegenResult": 2,
                             "column": 17,
                             "durationMicroseconds": 0,
                             "functionName": "target",
-                            "line": 761,
+                            "line": 977,
                             "message": "Cannot access value for name backend"
                         },
                         {
@@ -1794,7 +2314,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyStarted",
-                            "line": 762,
+                            "line": 978,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1802,7 +2322,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyProgress",
-                            "line": 767,
+                            "line": 983,
                             "message": "Functions without type annotations won't be compiled"
                         },
                         {
@@ -1810,7 +2330,7 @@
                             "column": 9,
                             "durationMicroseconds": 0,
                             "functionName": "onBatchClassifyFinished",
-                            "line": 771,
+                            "line": 987,
                             "message": ""
                         }
                     ],

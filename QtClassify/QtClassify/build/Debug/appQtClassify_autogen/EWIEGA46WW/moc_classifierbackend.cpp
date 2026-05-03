@@ -38,12 +38,28 @@ template <> constexpr inline auto ClassificationResultModel::qt_create_metaobjec
 {
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
-        "ClassificationResultModel"
+        "ClassificationResultModel",
+        "sortChanged",
+        "",
+        "sortByColumn",
+        "column",
+        "sortColumn",
+        "sortAscending"
     };
 
     QtMocHelpers::UintData qt_methods {
+        // Signal 'sortChanged'
+        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
+        // Method 'sortByColumn'
+        QtMocHelpers::MethodData<void(int)>(3, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 4 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
+        // property 'sortColumn'
+        QtMocHelpers::PropertyData<int>(5, QMetaType::Int, QMC::DefaultPropertyFlags, 0),
+        // property 'sortAscending'
+        QtMocHelpers::PropertyData<bool>(6, QMetaType::Bool, QMC::DefaultPropertyFlags, 0),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -63,10 +79,25 @@ Q_CONSTINIT const QMetaObject ClassificationResultModel::staticMetaObject = { {
 void ClassificationResultModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     auto *_t = static_cast<ClassificationResultModel *>(_o);
-    (void)_t;
-    (void)_c;
-    (void)_id;
-    (void)_a;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->sortChanged(); break;
+        case 1: _t->sortByColumn((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (ClassificationResultModel::*)()>(_a, &ClassificationResultModel::sortChanged, 0))
+            return;
+    }
+    if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast<int*>(_v) = _t->sortColumn(); break;
+        case 1: *reinterpret_cast<bool*>(_v) = _t->sortAscending(); break;
+        default: break;
+        }
+    }
 }
 
 const QMetaObject *ClassificationResultModel::metaObject() const
@@ -85,7 +116,195 @@ void *ClassificationResultModel::qt_metacast(const char *_clname)
 int ClassificationResultModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QAbstractListModel::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 2)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 2)
+            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+        _id -= 2;
+    }
+    if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
+            || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
+            || _c == QMetaObject::RegisterPropertyMetaType) {
+        qt_static_metacall(this, _c, _id, _a);
+        _id -= 2;
+    }
     return _id;
+}
+
+// SIGNAL 0
+void ClassificationResultModel::sortChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+namespace {
+struct qt_meta_tag_ZN16ClassifierWorkerE_t {};
+} // unnamed namespace
+
+template <> constexpr inline auto ClassifierWorker::qt_create_metaobjectdata<qt_meta_tag_ZN16ClassifierWorkerE_t>()
+{
+    namespace QMC = QtMocConstants;
+    QtMocHelpers::StringRefStorage qt_stringData {
+        "ClassifierWorker",
+        "started",
+        "",
+        "totalFiles",
+        "progress",
+        "current",
+        "total",
+        "filename",
+        "resultReady",
+        "ClassificationResult",
+        "result",
+        "finished",
+        "errorOccurred",
+        "errorMessage",
+        "process"
+    };
+
+    QtMocHelpers::UintData qt_methods {
+        // Signal 'started'
+        QtMocHelpers::SignalData<void(int)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 3 },
+        }}),
+        // Signal 'progress'
+        QtMocHelpers::SignalData<void(int, int, const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 5 }, { QMetaType::Int, 6 }, { QMetaType::QString, 7 },
+        }}),
+        // Signal 'resultReady'
+        QtMocHelpers::SignalData<void(ClassificationResult)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 },
+        }}),
+        // Signal 'finished'
+        QtMocHelpers::SignalData<void()>(11, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'errorOccurred'
+        QtMocHelpers::SignalData<void(const QString &)>(12, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 13 },
+        }}),
+        // Slot 'process'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPublic, QMetaType::Void),
+    };
+    QtMocHelpers::UintData qt_properties {
+    };
+    QtMocHelpers::UintData qt_enums {
+    };
+    return QtMocHelpers::metaObjectData<ClassifierWorker, qt_meta_tag_ZN16ClassifierWorkerE_t>(QMC::MetaObjectFlag{}, qt_stringData,
+            qt_methods, qt_properties, qt_enums);
+}
+Q_CONSTINIT const QMetaObject ClassifierWorker::staticMetaObject = { {
+    QMetaObject::SuperData::link<QObject::staticMetaObject>(),
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN16ClassifierWorkerE_t>.stringdata,
+    qt_staticMetaObjectStaticContent<qt_meta_tag_ZN16ClassifierWorkerE_t>.data,
+    qt_static_metacall,
+    nullptr,
+    qt_staticMetaObjectRelocatingContent<qt_meta_tag_ZN16ClassifierWorkerE_t>.metaTypes,
+    nullptr
+} };
+
+void ClassifierWorker::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    auto *_t = static_cast<ClassifierWorker *>(_o);
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        switch (_id) {
+        case 0: _t->started((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->progress((*reinterpret_cast<std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast<std::add_pointer_t<QString>>(_a[3]))); break;
+        case 2: _t->resultReady((*reinterpret_cast<std::add_pointer_t<ClassificationResult>>(_a[1]))); break;
+        case 3: _t->finished(); break;
+        case 4: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->process(); break;
+        default: ;
+        }
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 2:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< ClassificationResult >(); break;
+            }
+            break;
+        }
+    }
+    if (_c == QMetaObject::IndexOfMethod) {
+        if (QtMocHelpers::indexOfMethod<void (ClassifierWorker::*)(int )>(_a, &ClassifierWorker::started, 0))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (ClassifierWorker::*)(int , int , const QString & )>(_a, &ClassifierWorker::progress, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (ClassifierWorker::*)(ClassificationResult )>(_a, &ClassifierWorker::resultReady, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (ClassifierWorker::*)()>(_a, &ClassifierWorker::finished, 3))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (ClassifierWorker::*)(const QString & )>(_a, &ClassifierWorker::errorOccurred, 4))
+            return;
+    }
+}
+
+const QMetaObject *ClassifierWorker::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
+}
+
+void *ClassifierWorker::qt_metacast(const char *_clname)
+{
+    if (!_clname) return nullptr;
+    if (!strcmp(_clname, qt_staticMetaObjectStaticContent<qt_meta_tag_ZN16ClassifierWorkerE_t>.strings))
+        return static_cast<void*>(this);
+    return QObject::qt_metacast(_clname);
+}
+
+int ClassifierWorker::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QObject::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 6)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 6;
+    }
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        if (_id < 6)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 6;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void ClassifierWorker::started(int _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
+}
+
+// SIGNAL 1
+void ClassifierWorker::progress(int _t1, int _t2, const QString & _t3)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1, _t2, _t3);
+}
+
+// SIGNAL 2
+void ClassifierWorker::resultReady(ClassificationResult _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
+}
+
+// SIGNAL 3
+void ClassifierWorker::finished()
+{
+    QMetaObject::activate(this, &staticMetaObject, 3, nullptr);
+}
+
+// SIGNAL 4
+void ClassifierWorker::errorOccurred(const QString & _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 4, nullptr, _t1);
 }
 namespace {
 struct qt_meta_tag_ZN17ClassifierBackendE_t {};
@@ -113,6 +332,8 @@ template <> constexpr inline auto ClassifierBackend::qt_create_metaobjectdata<qt
         "classifyDirectory",
         "dirPath",
         "clearBatchResults",
+        "sortBatchModel",
+        "column",
         "imagePath",
         "classificationLabel",
         "brightness",
@@ -158,36 +379,40 @@ template <> constexpr inline auto ClassifierBackend::qt_create_metaobjectdata<qt
         }}),
         // Slot 'clearBatchResults'
         QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPublic, QMetaType::Void),
+        // Slot 'sortBatchModel'
+        QtMocHelpers::SlotData<void(int)>(18, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 19 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
         // property 'imagePath'
-        QtMocHelpers::PropertyData<QString>(18, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 0),
+        QtMocHelpers::PropertyData<QString>(20, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 0),
         // property 'classificationLabel'
-        QtMocHelpers::PropertyData<QString>(19, QMetaType::QString, QMC::DefaultPropertyFlags, 1),
+        QtMocHelpers::PropertyData<QString>(21, QMetaType::QString, QMC::DefaultPropertyFlags, 1),
         // property 'brightness'
-        QtMocHelpers::PropertyData<double>(20, QMetaType::Double, QMC::DefaultPropertyFlags, 1),
-        // property 'entropy'
-        QtMocHelpers::PropertyData<double>(21, QMetaType::Double, QMC::DefaultPropertyFlags, 1),
-        // property 'cannyEdgeDensity'
         QtMocHelpers::PropertyData<double>(22, QMetaType::Double, QMC::DefaultPropertyFlags, 1),
+        // property 'entropy'
+        QtMocHelpers::PropertyData<double>(23, QMetaType::Double, QMC::DefaultPropertyFlags, 1),
+        // property 'cannyEdgeDensity'
+        QtMocHelpers::PropertyData<double>(24, QMetaType::Double, QMC::DefaultPropertyFlags, 1),
         // property 'usedTiebreaker'
-        QtMocHelpers::PropertyData<bool>(23, QMetaType::Bool, QMC::DefaultPropertyFlags, 1),
+        QtMocHelpers::PropertyData<bool>(25, QMetaType::Bool, QMC::DefaultPropertyFlags, 1),
         // property 'lastError'
-        QtMocHelpers::PropertyData<QString>(24, QMetaType::QString, QMC::DefaultPropertyFlags, 2),
+        QtMocHelpers::PropertyData<QString>(26, QMetaType::QString, QMC::DefaultPropertyFlags, 2),
         // property 'roiFraction'
-        QtMocHelpers::PropertyData<double>(25, QMetaType::Double, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 3),
+        QtMocHelpers::PropertyData<double>(27, QMetaType::Double, QMC::DefaultPropertyFlags | QMC::Writable | QMC::StdCppSet, 3),
         // property 'batchModel'
-        QtMocHelpers::PropertyData<QObject*>(26, QMetaType::QObjectStar, QMC::DefaultPropertyFlags | QMC::Constant),
+        QtMocHelpers::PropertyData<QObject*>(28, QMetaType::QObjectStar, QMC::DefaultPropertyFlags | QMC::Constant),
         // property 'batchCountP50'
-        QtMocHelpers::PropertyData<int>(27, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
-        // property 'batchCountP80'
-        QtMocHelpers::PropertyData<int>(28, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
-        // property 'batchCountP150'
         QtMocHelpers::PropertyData<int>(29, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
-        // property 'batchCountErrors'
+        // property 'batchCountP80'
         QtMocHelpers::PropertyData<int>(30, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
-        // property 'batchTotal'
+        // property 'batchCountP150'
         QtMocHelpers::PropertyData<int>(31, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
+        // property 'batchCountErrors'
+        QtMocHelpers::PropertyData<int>(32, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
+        // property 'batchTotal'
+        QtMocHelpers::PropertyData<int>(33, QMetaType::Int, QMC::DefaultPropertyFlags, 4),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -220,6 +445,7 @@ void ClassifierBackend::qt_static_metacall(QObject *_o, QMetaObject::Call _c, in
         case 8: _t->classifyCurrentImage(); break;
         case 9: _t->classifyDirectory((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 10: _t->clearBatchResults(); break;
+        case 11: _t->sortBatchModel((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -290,14 +516,14 @@ int ClassifierBackend::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 11)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 11;
+        _id -= 12;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 11)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 11;
+        _id -= 12;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
